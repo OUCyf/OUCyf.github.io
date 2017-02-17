@@ -12,7 +12,7 @@
     <entry>
       <title><![CDATA[AAA]]></title>
       <url>%2F2017%2F02%2F14%2FAAA%2F</url>
-      <content type="text"><![CDATA[BBB]]></content>
+      <content type="text"><![CDATA[BBB在首页显示一篇文章的部分内容，并提供一个链接跳转到全文页面是一个常见的需求。 NexT 提供三种方式来控制文章在首页的显示方式。 也就是说，在首页显示文章的摘录并显示 阅读全文 按钮，可以通过以下方法： 在文章中使用 手动进行截断，Hexo 提供的方式 推荐在文章的 front-matter 中添加 description，并提供文章摘录自动形成摘要，在 主题配置文件 中添加：]]></content>
     </entry>
 
     
