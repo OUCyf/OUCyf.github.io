@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>小小蒲公英</title>
+  
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://yoursite.com/"/>
+  <updated>2017-02-17T15:59:20.024Z</updated>
+  <id>http://yoursite.com/</id>
+  
+  <author>
+    <name>John Doe</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>只有夜来香</title>
+    <link href="http://yoursite.com/2017/02/16/%E5%8F%AA%E6%9C%89%E5%A4%9C%E6%9D%A5%E9%A6%99/"/>
+    <id>http://yoursite.com/2017/02/16/只有夜来香/</id>
+    <published>2017-02-16T07:32:09.000Z</published>
+    <updated>2017-02-17T15:59:20.024Z</updated>
+    
+    <content type="html"><![CDATA[<p><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="//music.163.com/outchain/player?type=2&id=22853005&auto=1&height=66"></iframe><br>歌曲名:只有夜来香<br>歌手:卢广仲<br>专辑:只有夜来香<br>卢广仲 - 只有夜来香<br>作曲：卢广仲 / 锺成虎<br>填词：讨海人<br><a id="more"></a><br>熟悉的街道<br>黄昏的太阳 西下<br>oh 疲倦的飞鸟<br>陌生的微风吹<br>金色的河水<br>飘送着生活的迷惑<br>我一步一步地<br>走着就走进梦中<br>我穿越了树梢<br>飞过了围墙<br>城市里的神话<br>我就向前追<br>莫名其妙会飞<br>想要知道谁在我梦中歌唱<br>绕过了街角 美丽的空旷<br>怎麽都没人说话<br>原来 只有夜来香<br>我是个孩子<br>只在你身边 玩耍<br>oh 聪明的眼睛<br>扬起的风筝飞<br>彩色的天空<br>山顶有太多迷惑<br>我一步一步地<br>走着就走进爱情中<br>我穿越了树梢<br>经过了河<br>城市里的神话<br>我就向前追<br>莫名其妙会飞<br>不知道是谁在我梦中歌唱<br>绕过了街角 美丽的空旷<br>是不是你在说话<br>也许 只有夜来香<br>夜来香 夜来香<br>可能 只有夜来香<br>今天 只有夜来香</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;iframe frameborder=&quot;no&quot; border=&quot;0&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; width=330 height=86 src=&quot;//music.163.com/outchain/player?type=2&amp;id=22853005&amp;auto=1&amp;height=66&quot;&gt;&lt;/iframe&gt;&lt;br&gt;歌曲名:只有夜来香&lt;br&gt;歌手:卢广仲&lt;br&gt;专辑:只有夜来香&lt;br&gt;卢广仲 - 只有夜来香&lt;br&gt;作曲：卢广仲 / 锺成虎&lt;br&gt;填词：讨海人&lt;br&gt;
+    
+    </summary>
+    
+    
+      <category term="cq" scheme="http://yoursite.com/tags/cq/"/>
+    
+  </entry>
+  
+</feed>
