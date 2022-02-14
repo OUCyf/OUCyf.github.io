@@ -1,0 +1,757 @@
+
+
+
+/* on narrow device, reduce margins */
+.franklin-content {
+  padding-left: 2.5%;
+  padding-right: 2.5%;
+}
+
+@media (min-width: 940px) {
+  .franklin-content {
+    width: 100%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .franklin-content {
+    width: 75%;
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+}
+
+pre {
+  font-size: var(--normal);
+}
+
+.franklin-content code {
+  font-size: var(--small);
+}
+
+.franklin-content .hljs {
+  font-size: var(--small);
+}
+
+blockquote {
+  font-size: 90%;
+}
+
+.fndef-content {
+  line-height: 1.5em;
+}
+
+.franklin-content h1 {
+  padding-bottom: 0.5em;
+  margin-top: 1.5em;
+  margin-bottom: 1em;
+}
+
+.franklin-content a {
+  text-decoration: none;
+}
+
+/* For some reason,
+ * `h1, h2, h3 { a { color: ... } a:visited { color: ... } }` didn't work.
+ */
+h1 a { color: #1c1c1c !important; }
+h2 a { color: #1c1c1c !important; }
+h3 a { color: #1c1c1c !important; }
+h4 a { color: #1c1c1c !important; }
+h5 a { color: #1c1c1c !important; }
+
+h1 a:visited { color: #1c1c1c !important; }
+h2 a:visited { color: #1c1c1c !important; }
+h3 a:visited { color: #1c1c1c !important; }
+h4 a:visited { color: #1c1c1c !important; }
+h5 a:visited { color: #1c1c1c !important; }
+
+
+
+
+/* ###################### */
+/* [1].light/black mode */
+.darkmode-layer, .darkmode-toggle {
+  z-index: 500;
+}
+
+
+/* ###################### */
+/* [2].masthead */
+img.masthead-icon {
+  height: 1.5em;
+}
+
+.title-icon img {
+  height: 2.0em;
+}
+
+/* ######################### */
+/* [2-1]. modify padding-left for img in franklin */
+.franklin-content img {
+  width: 100%;
+  text-align: center;
+  padding-left: 0%;
+}
+
+
+/* ###################### */
+/* [3].banner */
+.banner-container {
+  margin-bottom: -6em;
+  margin-top: 1em;
+  background: url("/assets/Picture10.png");
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  padding-top: 50%;
+}
+
+
+
+/* ################ */
+/* [4].blog */
+.posts-container {
+  width: 100%;
+  /* max-width: 760px; */
+}
+
+@media (min-width: 40em) {
+    .posts-container {
+        font-size: var(--normal);
+    }
+}
+
+.list span.post-date {
+  float: right;
+  color: #767676;
+  padding-left: 30px;
+  font-size: 90%;
+}
+
+span.post-descr {
+  float: none;
+  font-style: italic;
+  color: var(--oxb);
+  font-size: 90%;
+}
+
+
+/* ################ */
+/* [5].tags */
+.terms {
+  margin: 2em 0 3em;
+  text-align: center;
+  font-family: Athelas,STHeiti,Microsoft Yahei,serif;
+}
+
+.terms-title {
+  font-size: 120%;
+  line-height: 20px;
+  color: gray;
+}
+
+.tag-link {
+  font-size: 120%;
+  line-height: 40px;
+  /* color: #767676; */
+  margin: 5px 15px;
+  display: inline-block;
+}
+
+a.tag-link:hover {
+  color: gray;
+}
+
+.tag-count {
+  font-size: 90%;
+  color: gray;
+}
+
+
+/* ################ */
+/* [6-1].change the sidebar size which replace .sidebar in minimal-mistake.css */
+@media (max-width: 80em) {
+.sidebar {
+  padding-left: 1.5em;
+  padding-right: 1.5em;
+}
+}
+@media (min-width: 80em) {
+  .sidebar {
+    width: calc(150px + 1em);
+  }
+}
+/* [6-2].change the main padding in minimal-mistake.css(3541) */
+#main {
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+}
+
+
+/* [6-3].add class="sidebar_toc" for cotalague */
+/* just because we set .sidebar in @media (max-width: 80em), we don't need to reset .sidebar_toc */
+@media (min-width: 64em) {
+  #navbar {
+    float: right;
+    width: calc(150px + 1em);
+    opacity: 0.75;
+    position: sticky;
+    top: 2em;
+    padding-left: 0.0em;
+  }
+}
+
+/* [6-4].navigate but ".navbar a" not work now */
+/* #navbar a {
+  color: hsl(19, 92%, 49%);
+} */
+#navbar a.active {
+  color: black;
+  text-decoration: underline black;
+}
+#navbar a:hover {
+  color: black;
+  text-decoration:underline black;
+}
+
+
+/* ################ */
+/* [7].introduction in index.md */
+.me-box{
+  overflow:hidden;
+}
+
+.photo{
+  float:right;
+  width:30%;
+  margin-left: 0px;
+  padding-top: 0%;
+  /* border: 3px solid green; */
+}
+.photo img{
+  width:100%;
+  padding-left: 0%;
+}
+.intro{
+  float:left;
+  width:68%;
+  /* border: 3px solid green; */
+}
+
+
+
+
+/* ################ */
+/* [8]. showing boxes in index.md*/
+.box-container {
+  display: grid;
+  grid-gap: 1em;
+  line-height: 1.2em;
+  justify-content: space-between;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.box {
+  position: relative;
+  background: rgb(241, 241, 241);
+  padding: 1em;
+  border-radius: 0.5em;
+  text-align: center;
+  box-shadow: 0px 2px 4px 1px rgba(0, 0, 0, 0.11);
+  font-size: var(--small);
+  transition: scale 0.2s ease-in-out;
+}
+
+
+.box:hover {
+  outline: 2px solid pink;
+  background-color: rgb(255, 255, 255);
+  scale: 1.03;
+}
+
+.box img {
+  margin-top: 1em;
+  border-radius: 0.3em;
+}
+
+@media (max-width: 480px) {
+  .box-container {
+      grid-template-columns: minmax(0, 1fr);
+  }
+
+  .box img {
+      max-width: 75%;
+  }
+}
+
+.youtube-container {
+  position: relative;
+  padding-bottom: 80.25%;
+  padding-top: 0;
+  height: 0;
+  overflow: hidden;
+  margin-top: 1em;
+}
+
+.youtube-container iframe,
+.youtube-container object,
+.youtube-container embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.title {
+  font-size: 20px;
+  color: black;
+  text-decoration: none;
+  margin-bottom: 1em;
+}
+
+a.boxlink {
+  text-decoration: none;
+  color: var(--text-color);
+  display: block;
+}
+
+a.boxlink:visited {
+  color: var(--text-color);
+}
+
+a.boxlink:hover {
+  text-decoration: none;
+}
+
+
+
+
+/* ################ */
+/* [9]. slider.css (done) */
+.slide-container{
+	height: 30vw;
+	overflow:hidden;
+  overflow-y: hidden;
+  overflow-x: hidden;
+	position: relative;
+}
+
+.slide-container .slide{
+	position: absolute;
+	left:0;
+	top:0;
+	width: 100%;
+	height: 100%;
+	background-size: cover;
+	background-position: center;
+	z-index:1; 
+	display:none;
+	padding:0 15px;
+	animation: slide 2s ease;
+}
+.slide-container .slide.active{
+	display: flex;
+}
+@keyframes slide{
+	0%{
+		transform:scale(1.1);
+	}
+	100%{
+		transform: scale(1);
+	}
+}
+
+.slide-container .caption{
+  max-width: 100vw;
+  flex-grow: 1;
+  margin-top: 15px; /* 2vw; */
+  line-height: 20px; /* 2vw; */
+}
+
+.slide-container .caption a{
+	font-size: var(--small); /* calc(1.5vw); */
+	color:#292828f3;
+  /* background-color: #5e616c; */
+ border-bottom: 1px solid #FF5722;
+}
+
+.slide-container .slide.active .caption a{
+	opacity:0;
+	animation: captionText .2s ease forwards;
+	animation-delay:0.2s;
+}
+
+@keyframes captionText{
+	0%{
+		opacity:0; transform: translateX(-100px);
+	}
+	100%{
+	 opacity:1; transform: translateX(0px);	
+	}
+}
+
+.slide-container .controls .prev,
+.slide-container .controls .next{
+ position: absolute;
+ z-index: 2;
+ top: 50%;
+ height: 30px;
+ width: 20px;
+ margin-top: -20px;
+ color:#ffffff;
+ background-color: #FF5722;
+ text-align: center;
+ line-height: 30px;
+ font-size:var(--normal);
+ cursor:pointer;
+ transition: all .5s ease;
+}
+.slide-container .controls .prev:hover,
+.slide-container .controls .next:hover{
+	background-color: #5e616c
+}
+.slide-container .controls .prev{
+ left:0;
+}
+.slide-container .controls .next{
+ right:0;
+}
+
+.slide-container .indicator{
+	position: absolute;
+	left:50%;
+	bottom:10px;
+	z-index: 2;
+	transform: translateX(-50%);
+}
+
+.slide-container .indicator div{
+  font-size:var(--small);
+	display: inline-block;
+	width:16px;
+	height: 16px;
+	color:#ffffff;
+	background-color: #FF5722;
+	border-radius:50%;
+	text-align: center;
+	line-height: 16px;
+	margin:0 3px;
+}
+
+.slide-container .indicator div.active{
+ background-color: #5e616c
+}
+
+@media(max-width: 767px){
+	.controls{
+		display: block;
+	}
+}
+
+
+/* ######################### */
+/* [10].change catlogue padding size */
+.masthead__inner-wrap {
+  font-size: 18px;
+  width: 100%;
+  padding: 0.7em;
+  color:rgb(158, 158, 158);
+}
+/* change catlogue color */
+.masthead__inner-wrap ul li a.active{
+  color:rgb(32, 32, 32);
+  font-weight: 600;
+  /* font-weight: bold; */
+  /* background-color: #00F7DE; */
+  /* text-decoration:underline black; */
+  /* border-bottom: 3px solid #6f777d; */
+}
+/* change font margin */
+.greedy-nav a {
+  margin: 0 0.8rem;
+}
+
+
+
+/* ######################### */
+/* [11].lunr style */
+/* real width = width - padding-left; must let 100% = width + padding-left */
+.franklin-content .wordcloud img{
+  width: 75%;
+  padding-left: 25%;
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+}
+
+.result-title a { 
+  text-decoration: none; 
+}
+
+.result-title a:hover { 
+  text-decoration: underline; 
+}
+
+.result-preview { 
+  color: #e60505; 
+}
+
+.resultCount { 
+  color: #808080; 
+  font-weight: bold;
+}
+
+.result-query { 
+  font-weight: bold; 
+}
+
+#lunrSearchForm {
+  margin-top: 0em;
+  margin-bottom: 3em;
+  background-color: rgb(255, 255, 255);
+  font-size: var(--normal);
+  position: relative;
+}
+
+#lunrSearchForm .search-input{
+  font: inherit;
+  background: #fff;
+  border: 1px solid #d4d8e3;
+  border-radius: 30px;
+  padding: 10px 10px 10px 35px;
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+  position: absolute;
+  margin-left: -1.0rem;
+}
+
+#lunrSearchForm .search-icon a{
+  color: rgb(163, 163, 163);
+  margin-top: 5px;
+  left: 12px;
+  z-index: 2;
+  position: absolute;
+}
+
+#lunrSearchForm .search-enter{
+  opacity:0.7;
+  /* background: gray; */
+  border: 1px dashed #d4d8e3;
+  border-radius: 30px;
+  z-index: 3;
+  position: absolute;
+  margin-top: 1px;
+  right: 0px;
+  height: 90%;
+}
+
+#lunrSearchForm .search-input:hover{
+  border-color:rgb(251, 178, 190);
+  border-width: 2px;
+}
+
+
+/* ######################### */
+/* [12]. PDF.js style */
+.div-canvas {
+  position: relative;
+  z-index: 1;
+}
+
+#the-canvas {
+  /* border: 1px solid black; */
+  direction: ltr;
+  width: 100%;
+  margin-top: -50px;
+}
+
+div .page_info {
+  text-align:center;
+}
+
+.page_button button{
+  background-color: rgb(255, 255, 255);
+  color:gray;
+  border: 0px solid gray;
+  padding: 5px 10px 5px 10px;
+  font-weight: bold;
+}
+
+.page_button button:hover{
+  background-color: pink;
+  color:gray;
+  border: 1px solid rgb(255, 170, 184);
+  border-radius: 10px;
+  opacity: 0.7;
+}
+
+span.page_number {
+  color:gray;
+  font-size: var(--normal);
+}
+
+div .Download-PDF {
+  position: relative;
+  float: right;
+  background-color: rgb(255, 255, 255);
+  border: 1px solid gray;
+  border-radius: 10px;
+  padding: 5px 10px 5px 10px;
+  margin-right: 20px;
+  font-weight: bold;
+  font-size: var(--normal);
+  z-index: 2;
+}
+
+div .Download-PDF:hover {
+  background-color: rgb(221, 221, 221);
+  /* color:gray; */
+  /* border: 1px solid gray; */
+  border-radius: 10px;
+  font-weight: bold;
+}
+
+
+/* ######################### */
+/* [13]. Google-slides and docs*/
+div .Google-slides {
+  text-align:center;
+}
+div .Google-slides iframe{
+  max-width:100%;
+}
+
+div .Google-docs {
+  text-align:center;
+}
+div .Google-docs iframe{
+  width:100%;
+}
+
+/* ######################### */
+/* [14]. Google-map and calendar */
+div .Google-map {
+  text-align:center;
+}
+div .Google-map iframe{
+  width:100%;
+}
+
+div .Google-calendar {
+  text-align:center;
+}
+div .Google-calendar iframe{
+  width:100%;
+}
+
+
+/* ######################### */
+/* [15]. utterances comments */
+.utterances {
+  max-width:100%;
+}
+
+
+/* ######################### */
+/* [16]. font-size style */
+:root {
+  --small: 14px;
+  --normal: 17px;
+}
+
+.small-font {
+  position: relative;
+  font-size: var(--small);
+}
+
+
+.franklin-content {
+  /* word-spacing: 1px; */
+  line-height: 1.5em;
+}
+
+.hljs {
+  line-height: 1.5em;
+}
+
+html {
+  /* text-align:justify; */
+  font-family:-apple-system,BlinkMacSystemFont,"helvetica neue",helvetica,roboto,noto,"segoe ui",arial,sans-serif,Apple Color Emoji,Segoe UI Emoji;
+}
+
+
+
+/* ######################### */
+/* [17]. research-box */
+.research-box {
+  position:relative;
+  background-color: rgb(246, 246, 246);
+  border-radius: 20px;
+  /* opacity: 0.7; */
+  padding: 20px 20px 30px 20px;
+  margin-bottom: 30px;
+  /* font-weight: bold; */
+  overflow:hidden;
+}
+
+.re-photo{
+  float:left;
+  width:30%;
+  margin-left: 0px;
+  padding-top: 0%;
+  /* border: 3px solid green; */
+}
+.re-photo img{
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0px 0px 5px rgba(0,0,0,.2);
+  width:100%;
+  padding: 5px 5px 5px 5px;
+}
+.re-intro{
+  float:right;
+  width:67%;
+  font-size: var(--small);
+  /* font-size: 12px; */
+  line-height: 1.5em;
+  /* border: 3px solid green; */
+}
+
+.research-box:hover {
+  outline: 3px solid pink;
+  background-color: white;
+}
+
+a.re-title{
+  color:black;
+  font-weight: bold;
+}
+a.re-title:hover{
+  color:#004de6;
+  font-weight: bold;
+}
+
+
+/* ######################### */
+/* [18]. publication */
+.publication-box {
+  position:relative;
+  border-radius: 10px;
+  padding: 1px 30px 30px 30px;
+  margin-bottom: 30px;
+  background-color: rgb(254, 254, 254);
+  box-shadow: 0px 0px 5px rgba(0,0,0,.4);
+}
+
+
+
+/* ######################### */
+/* [19]. resource */
+a.link-university{
+  color:#494e52;
+}
+a.link-university:hover{
+  color:#004de6;
+}
