@@ -6,3 +6,6 @@ __site/
 
 # lunr module
 node_modules/
+
+# yinfu test
+2.txt
