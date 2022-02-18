@@ -1,0 +1,8 @@
+# MACOS junk
+.DS_Store
+
+# locally html site
+__site/
+
+# lunr module
+node_modules/
