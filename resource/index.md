@@ -18,7 +18,7 @@ MCMTpy: a Python package for focal mechanism inversion and source parameters ana
 ~~~
 
 @@re-photo
-![](/assets/logo.gif) 
+![](/assets/resource-data/MCMTpy.gif) 
 <!-- ~~~<br><br>~~~ -->
 <!-- ![](/assets/advatar-1.png)  -->
 @@
@@ -51,7 +51,7 @@ NoiseCC: a framwork for ambient noise cross-correlation (CC) based on SeisNoise.
 ~~~
 
 @@re-photo 
-![](/assets/waveform.png) 
+![](/assets/resource-data/NoiseCC.png) 
 <!-- ~~~<br><br>~~~ -->
 <!-- ![](/assets/advatar-1.png)  -->
 @@
@@ -83,7 +83,7 @@ SeisFlow: a framework for processing massive seismic data based on Python and Ju
 ~~~
 
 @@re-photo 
-![](/assets/flow.png) 
+![](/assets/resource-data/SeisFlow.png) 
 <!-- ~~~<br><br>~~~ -->
 <!-- ![](/assets/research-3.2.jpg)  -->
 @@
@@ -110,7 +110,7 @@ Just-The-Seismology: a personal website template designed for scientific researc
 ~~~
 
 @@re-photo 
-![](/assets/logo.png) 
+![](/assets/resource-data/JTS.png) 
 <!-- ~~~<br><br>~~~ -->
 <!-- ![](/assets/research-3.2.jpg)  -->
 @@
@@ -242,3 +242,4 @@ SPICE software
 
 @@
 @@
+

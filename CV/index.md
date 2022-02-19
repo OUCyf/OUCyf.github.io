@@ -11,7 +11,7 @@
     <a href="CV.pdf">Download</a>
 </div>
 <script>
-    url = '../../CV/CV.pdf'
+    url = '/cv/CV.pdf'
 </script>
 <div class="div-canvas">
     <canvas id="the-canvas"></canvas>

@@ -2,7 +2,7 @@ using Dates, OrderedCollections
 
 
 ####################################
-#  [1]. Blog posts
+#  [1]. Blog and Tag
 ####################################
 const FIRST_YEAR = 2015
 
@@ -11,19 +11,19 @@ function hfun_posts()
     io = IOBuffer()
     for year in curyear:-1:FIRST_YEAR
         ys = "$year"
-        isdir(joinpath("blogs", ys)) || continue
+        isdir(joinpath("blog", ys)) || continue
         write(io, "\n\n### $year\n\n")
         write(io, "@@list,mb-5\n")
         for month in 12:-1:1
             ms = "0"^(month < 10) * "$month"
-            base = joinpath("blogs", ys, ms)
+            base = joinpath("blog", ys, ms)
             isdir(base) || continue
             posts = filter!(p -> endswith(p, ".md"), readdir(base))
             days  = zeros(Int, length(posts))
             lines = Vector{String}(undef, length(posts))
             for (i, post) in enumerate(posts)
                 ps  = splitext(post)[1]
-                url = "/blogs/$ys/$ms/$ps/"
+                url = "/blog/$ys/$ms/$ps/"
                 surl = strip(url, '/')
                 title = pagevar(surl, :title)
                 # println(pagevar(surl, :navigation))
@@ -205,4 +205,51 @@ function hfun_navigation()
   write(io, """</div>""")
 
   return String(take!(io))
+end
+
+
+####################################
+#  [3]. utteranc
+####################################
+
+"""
+    {{ addcomments }}
+
+Add a comment widget, managed by utterances <https://utteranc.es>.
+"""
+function hfun_addcomments()
+    html_str = """
+        <script src="https://utteranc.es/client.js"
+            repo="OUCyf/Website-Comment"
+            issue-term="pathname"
+            label="Comment"
+            theme="github-light"
+            crossorigin="anonymous"
+            async>
+        </script>
+    """
+    return html_str
+end
+
+
+
+####################################
+#  [4]. youtube video
+####################################
+"""
+    {{youtube Hz9IMJuW5hU}}
+Add a youtube video
+"""
+function hfun_youtube(params)
+    id = params[1]
+    return """
+        <div style=position:relative;padding-bottom:56.25%;height:0;overflow:hidden>
+          <iframe
+            src=https://www.youtube.com/embed/$id
+            style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;"
+            allowfullscreen
+            title="YouTube Video">
+          </iframe>
+        </div>
+        """
 end

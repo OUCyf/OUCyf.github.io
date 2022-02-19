@@ -1,5 +1,4 @@
 @def title = "404"
-@def hidden = true
 
 
 ~~~

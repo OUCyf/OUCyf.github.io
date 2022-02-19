@@ -1,11 +1,13 @@
-# MACOS junk
+# MacOS junk
 .DS_Store
 
 # locally html site
 __site/
 
 # lunr module
+package.json
+package-lock.json
 node_modules/
 
-# yinfu test
-2.txt
+# wordcloud
+wordcloud/

@@ -3,7 +3,6 @@ on:
   push:
     branches:
       - master
-      - main
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
@@ -12,6 +11,7 @@ jobs:
       uses: actions/checkout@v2
       with:
         persist-credentials: false
+
     # NOTE: Python is necessary for the pre-rendering (minification) step
     - name: Install python
       uses: actions/setup-python@v2
@@ -19,11 +19,12 @@ jobs:
         python-version: '3.8'
     # NOTE: Here you can install dependencies such as matplotlib if you use
     # packages such as PyPlot.
-    # - run: pip install matplotlib
+    - run: pip install matplotlib
+
     - name: Install Julia
       uses: julia-actions/setup-julia@v1
       with:
-        version: 1.5
+        version: 1.7
     # NOTE
     #   The steps below ensure that NodeJS and Franklin are loaded then it
     #   installs highlight.js which is needed for the prerendering step
@@ -33,11 +34,18 @@ jobs:
     #   The last line should be `optimize()` though you may want to give it
     #   specific arguments, see the documentation or ?optimize in the REPL.
     - run: julia -e '
-            using Pkg; Pkg.add(["NodeJS", "Franklin", "OrderedCollections"]);
-            using NodeJS; run(`$(npm_cmd()) install highlight.js`);
+            using Pkg; 
+            Pkg.add(["NodeJS", "Franklin", "OrderedCollections"]);
+            using NodeJS; 
+            run(`$(npm_cmd()) install highlight.js`);
+            run(`$(npm_cmd()) install lunr`);
+            run(`$(npm_cmd()) install cheerio`);
             using Franklin;
-            Pkg.activate("."); Pkg.instantiate();
-            optimize()'
+            Pkg.activate("."); 
+            Pkg.instantiate();
+            serve(single=true, cleanup=false);
+            lunr();
+            optimize(minify=false, prerender=false)'
     - name: Build and Deploy
       uses: JamesIves/github-pages-deploy-action@releases/v3
       with:

@@ -1,4 +1,4 @@
-# My Research Interests ✨
+# Research Interests ✨
 
 My main research interests include focal mechanism inversion of **earthqauke sources**, **ambient noise monitoring and imaging**. I am also interested in uncertainty assessment of seismic inversion, especially using **Bayesian Inference**. Recently I want to apply those seismology method into Distributed Acoustic Sensing (DAS) data with cloud compuating.
 
@@ -18,7 +18,7 @@ My main research interests include focal mechanism inversion of **earthqauke sou
 ~~~
 
 @@re-photo
-![](/assets/research-1.png) 
+![](/assets/research-data/research-1.png) 
 ~~~<br><br>~~~
 <!-- ![](/assets/advatar-1.png)  -->
 @@
@@ -48,7 +48,7 @@ My main research interests include focal mechanism inversion of **earthqauke sou
 ~~~
 
 @@re-photo 
-![](/assets/research-2.png) 
+![](/assets/research-data/research-2.png) 
 ~~~<br><br>~~~
 <!-- ![](/assets/advatar-1.png)  -->
 @@
@@ -77,9 +77,9 @@ My main research interests include focal mechanism inversion of **earthqauke sou
 ~~~
 
 @@re-photo 
-![](/assets/research-3.gif) 
+![](/assets/research-data/research-3-1.gif) 
 ~~~<br><br>~~~
-![](/assets/research-3.2.jpg) 
+![](/assets/research-data/research-3-2.jpg) 
 @@
 
 @@re-intro
@@ -109,9 +109,9 @@ My main research interests include focal mechanism inversion of **earthqauke sou
 ~~~
 
 @@re-photo 
-<!-- ![](/assets/research-3.gif)  -->
+<!-- ![](/assets/research-data/research-3-1.gif)  -->
 ~~~<br><br>~~~
-<!-- ![](/assets/research-3.2.jpg)  -->
+<!-- ![](/assets/research-data/research-3-2.jpg)  -->
 @@
 
 @@re-intro
@@ -125,7 +125,7 @@ My main research interests include focal mechanism inversion of **earthqauke sou
 
 
 
-# Do you know✨
+# Do you know ✨
 
 I look forward to teamwork, and if you have any ideas you'd like to share with me, feel free to let me know. I hope to find some potential collaborators for  the following projects:
 
@@ -133,12 +133,4 @@ I look forward to teamwork, and if you have any ideas you'd like to share with m
 - Bayesian Inference in seismic inversion.
 - ...
 
-~~~
-<script src="https://utteranc.es/client.js"
-        repo="OUCyf/Website-Comment"
-        issue-term="pathname"
-        theme="github-light"
-        crossorigin="anonymous"
-        async>
-</script>
-~~~
+{{ addcomments }}

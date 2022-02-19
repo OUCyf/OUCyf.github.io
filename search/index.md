@@ -17,6 +17,6 @@
 
 
 
-# Search Result
+# Search Result ✨
 Number of results found: ~~~<span id="resultCount"></span>~~~
 ~~~<div id="searchResults"></div>~~~

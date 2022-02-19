@@ -21,11 +21,11 @@
 ## Education ⏬ ~~~<br>~~~
 
 - **_M.S. in Geological Engineering, 2019 - now_**\
-  🎓 ~~~<span class="small-font"> University of Science and Technology of China </span>~~~\
-  👨‍🏫 ~~~<span class="small-font"> Advisor: Prof. Baoshan Wang </span>~~~\
+  🎓  ~~~<span class="small-font"> University of Science and Technology of China </span>~~~\
+  👨‍🏫  ~~~<span class="small-font"> Advisor: Prof. Baoshan Wang </span>~~~\
 - **_B.S. in Geo-Information Science and Technology, 2015 - 2019_**\
-  🎓 ~~~<span class="small-font"> Ocean University of China </span>~~~\
-  👨‍🏫 ~~~<span class="small-font"> Advisor: Prof. Zhihu Zou and Siyou Tong </span>~~~\
+  🎓  ~~~<span class="small-font"> Ocean University of China </span>~~~\
+  👨‍🏫  ~~~<span class="small-font"> Advisor: Prof. Zhihu Zou and Siyou Tong </span>~~~\
 
 ## Interests ⏬
 
@@ -93,13 +93,9 @@
     @@box-content
       @@description
       Follow me for more programming and seismology learning resources.
-      <!-- ~~~<br><br>~~~ -->
+      ~~~<br><br>~~~
       @@
-      ~~~
-      <div class="youtube-container">
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/AtqXFfaMZqo?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-      </div>
-      ~~~
+      {{youtube Hz9IMJuW5hU}}
     @@
     ~~~</a>~~~
   @@
@@ -130,13 +126,4 @@
 
 # Message Board ✨
 - Login GitHub account first.
-
-~~~
-<script src="https://utteranc.es/client.js"
-        repo="OUCyf/Website-Comment"
-        issue-term="pathname"
-        theme="github-light"
-        crossorigin="anonymous"
-        async>
-</script>
-~~~
+{{ addcomments }}

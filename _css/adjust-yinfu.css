@@ -1,6 +1,3 @@
-
-
-
 /* on narrow device, reduce margins */
 .franklin-content {
   padding-left: 2.5%;
@@ -100,7 +97,7 @@ img.masthead-icon {
 .banner-container {
   margin-bottom: -6em;
   margin-top: 1em;
-  background: url("/assets/Picture10.png");
+  background: url("/assets/banner-icon.png");
   background-size: cover;
   background-position: center;
   width: 100%;
@@ -182,6 +179,7 @@ a.tag-link:hover {
     width: calc(150px + 1em);
   }
 }
+
 /* [6-2].change the main padding in minimal-mistake.css(3541) */
 #main {
   padding-left: 0.5em;
@@ -241,7 +239,6 @@ a.tag-link:hover {
 
 
 
-
 /* ################ */
 /* [8]. showing boxes in index.md*/
 .box-container {
@@ -285,25 +282,6 @@ a.tag-link:hover {
   }
 }
 
-.youtube-container {
-  position: relative;
-  padding-bottom: 80.25%;
-  padding-top: 0;
-  height: 0;
-  overflow: hidden;
-  margin-top: 1em;
-}
-
-.youtube-container iframe,
-.youtube-container object,
-.youtube-container embed {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-
 .title {
   font-size: 20px;
   color: black;
@@ -324,7 +302,6 @@ a.boxlink:visited {
 a.boxlink:hover {
   text-decoration: none;
 }
-
 
 
 
@@ -451,6 +428,7 @@ a.boxlink:hover {
 }
 
 
+
 /* ######################### */
 /* [10].change catlogue padding size */
 .masthead__inner-wrap {
@@ -554,6 +532,7 @@ a.boxlink:hover {
 }
 
 
+
 /* ######################### */
 /* [12]. PDF.js style */
 .div-canvas {
@@ -630,6 +609,7 @@ div .Google-docs {
 div .Google-docs iframe{
   width:100%;
 }
+
 
 /* ######################### */
 /* [14]. Google-map and calendar */

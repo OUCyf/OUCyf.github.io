@@ -1,3 +1,3 @@
-# All tags
+# All tags ✨
 
 @@tagslist {{list_tags}} @@

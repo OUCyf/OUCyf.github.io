@@ -7,23 +7,23 @@
 @@slide-container
 @@slider
 <!-- ############### news - 1 ############## -->
-~~~<div class="slide active" style="background-image: url('/assets/news-jiaozhouwan.jpg')">~~~
+~~~<div class="slide active" style="background-image: url('/assets/news-data/2022-01-01-news-1.jpg')">~~~
 @@caption
-[Welcome to my website 👋](/News/news-1)
+[Welcome to my website 👋](/news/2022-01-01-news)
 @@
 ~~~</div>~~~
 
 <!-- ############### news - 2 ############## -->
-~~~<div class="slide active" style="background-image: url('/assets/news-shanghai.jpg')">~~~
+~~~<div class="slide active" style="background-image: url('/assets/news-data/2022-01-01-news-2.jpg')">~~~
 @@caption
-[Shanghai city in China 👋](/News/news-1)
+[Shanghai city in China 👋](/news/2022-01-01-news)
 @@
 ~~~</div>~~~
 
 <!-- ############### news - 3 ############## -->
-~~~<div class="slide active" style="background-image: url('/assets/news-zhou.jpg')">~~~
+~~~<div class="slide active" style="background-image: url('/assets/news-data/2022-01-01-news-3.jpg')">~~~
 @@caption
-[Jay Chou's concert in Qingdao 👋](/News/news-1)
+[Jay Chou's concert in Qingdao 👋](/news/2022-01-01-news)
 @@
 ~~~</div>~~~
 
@@ -43,13 +43,13 @@
 <!-- content -->
 ~~~<br>~~~
 @@small-font
--~~~<a class="link-university" href="/News/news-1">
+-~~~<a class="link-university" href="/news/2022-01-01-news">
 <strong>2022/02/14:</strong> Welcome to my website! </a>~~~
 
--~~~<a class="link-university" href="/News/news-1">
+-~~~<a class="link-university" href="/news/2022-01-01-news">
 <strong>2022/02/14:</strong> Welcome to my website! </a>~~~
 
--~~~<a class="link-university" href="/News/news-1">
+-~~~<a class="link-university" href="/news/2022-01-01-news">
 <strong>2022/02/14:</strong> Welcome to my website! </a>~~~
 @@
 
@@ -67,7 +67,7 @@
 @@publication-box
 @@small-font
 ## 2022
--~~~<a class="link-university" href="/News/news-1">
+-~~~<a class="link-university" href="/news/2022-01-01-news">
 <strong>2022/02/14:</strong> Happy Valentine's Day！ </a>~~~
 
 - **2022/02/01:** Happy Spring Festival！
