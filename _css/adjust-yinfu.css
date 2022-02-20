@@ -735,3 +735,74 @@ a.link-university{
 a.link-university:hover{
   color:#004de6;
 }
+
+
+
+/* ######################### */
+/* [20]. blog */
+div .blog {
+  line-height: 1.5em;
+  background-color: rgb(244, 255, 227);
+  border: 1px solid rgb(217, 255, 157);
+  border-radius: 10px;
+  padding: 15px 10px 15px 10px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+div .blog-title {
+  font-size: 22px;
+  margin-bottom: 20px;
+}
+
+div .blog-intro {
+  font-size: var(--small);
+}
+
+.note {
+  margin-top: 1.5em;
+  width: 95%;
+  margin-left:auto;
+  margin-right:auto;
+  background-color:  aliceblue;
+  border-radius: 5px;
+  margin-bottom: 1em;
+}
+.note .content {
+  padding: 10px;
+  padding-left: 12px;
+}
+.note .title{
+  font-size: 105%;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  padding-left: 7px;
+  padding-top: 2px;
+  color: white;
+  background: cornflowerblue;
+  margin-bottom: 0em;
+}
+
+.warning {
+  margin-top: 1.5em;
+  width: 95%;
+  margin-left:auto;
+  margin-right:auto;
+  background-color:  #f1b3b1;
+  border-radius: 5px;
+  margin-bottom: 1em;
+}
+.warning .content {
+  padding: 10px;
+  padding-left: 12px;
+}
+.warning .title{
+  font-size: 105%;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  padding-left: 7px;
+  padding-top: 2px;
+  color: white;
+  background: crimson;
+  margin-bottom: 0em;
+}

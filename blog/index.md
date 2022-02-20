@@ -11,4 +11,7 @@ title = "All posts"
 @@posts-container,mx-auto,px-3,py-3 {{posts}} @@
 
 
+@@colbox-blue,small-font
+**NOTE❗️**: Please indicate the source and author for reprinting. If you enjoy the blog, please consider [**sponsoring**](/blog/2022/02/13-hello-world/#sponsoring) 🍿 
+@@
 
