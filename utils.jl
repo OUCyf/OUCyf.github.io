@@ -4,7 +4,7 @@ using Dates, OrderedCollections
 ####################################
 #  [1]. Blog and Tag
 ####################################
-const FIRST_YEAR = 2015
+const FIRST_YEAR = 2021
 
 function hfun_posts()
     curyear = year(Dates.today())

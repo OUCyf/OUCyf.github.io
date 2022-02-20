@@ -9,7 +9,7 @@
 @@me-box
   @@photo ![](/assets/advatar-1.png) @@
   @@intro
-  I'm **Fu Yin** 👋, a graduate student in the **[University of Science and Technology of China](https://en.ustc.edu.cn/)**, advised by Prof. [Baoshan Wang](http://ess.ustc.edu.cn/faculties/detail-207.html). I received bachelor degree in Geophysics from **[Ocean University of China](http://eweb.ouc.edu.cn/)**.
+  I'm **Fu Yin** 👋 , a graduate student in the **[University of Science and Technology of China](https://en.ustc.edu.cn/)**, advised by Prof. [Baoshan Wang](http://ess.ustc.edu.cn/faculties/detail-207.html). I received bachelor degree in Geophysics from **[Ocean University of China](http://eweb.ouc.edu.cn/)**.
 
   My research focus on **seismology**, including earthqauke sources, ambient noise monitoring and imaging. Recently interested in the combination with Distributed Acoustic Sensing **(DAS)** and **Cloud Compuating**. I am also interested in uncertainty assessment of the seismic inversion, especially using **Bayesian Inference**.
 
@@ -21,18 +21,18 @@
 ## Education ⏬ ~~~<br>~~~
 
 - **_M.S. in Geological Engineering, 2019 - now_**\
-  🎓  ~~~<span class="small-font"> University of Science and Technology of China </span>~~~\
-  👨‍🏫  ~~~<span class="small-font"> Advisor: Prof. Baoshan Wang </span>~~~\
+  🎓 &nbsp; ~~~<span class="small-font"> University of Science and Technology of China </span>~~~\
+  👨‍🏫 &nbsp; ~~~<span class="small-font"> Advisor: Prof. Baoshan Wang </span>~~~\
 - **_B.S. in Geo-Information Science and Technology, 2015 - 2019_**\
-  🎓  ~~~<span class="small-font"> Ocean University of China </span>~~~\
-  👨‍🏫  ~~~<span class="small-font"> Advisor: Prof. Zhihu Zou and Siyou Tong </span>~~~\
+  🎓 &nbsp; ~~~<span class="small-font"> Ocean University of China </span>~~~\
+  👨‍🏫 &nbsp; ~~~<span class="small-font"> Advisor: Prof. Zhihu Zou and Siyou Tong </span>~~~\
 
 ## Interests ⏬
 
-- 💬 Earthquake Source Inversion
-- 💬 Ambient Noise Monitoring and Imaging
-- 💬 Bayesian Inference (MCMC, reversible-jump MCMC, HMC and NUTS)
-- 💬 Distributed Acoustic Sensing Technique (DAS) and High-Performance Computing (HPC)
+- 💬 &nbsp; Earthquake Source Inversion
+- 💬 &nbsp; Ambient Noise Monitoring and Imaging
+- 💬 &nbsp; Bayesian Inference (MCMC, reversible-jump MCMC, HMC and NUTS)
+- 💬 &nbsp; Distributed Acoustic Sensing Technique (DAS) and High-Performance Computing (HPC)
 
 
 
