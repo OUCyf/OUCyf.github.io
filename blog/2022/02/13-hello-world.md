@@ -26,7 +26,7 @@ tags = ["hello","Sponsoring"]
 @@
 
 <!-- d.toc -->
-\toc
+<!-- \toc -->
 
 
 
@@ -95,16 +95,22 @@ Thanks for your following and supportting the blog.
     ~~~</a>~~~
   @@
 @@
-~~~<br>~~~
 
 
 
 
-# Message Board ✨
+ 
+## History:
+@@small-font
+- 2022-01-20: draft
+- 2022-01-21: final
+@@
 
 @@colbox-blue,small-font
 **Author**: Fu Yin\\
-**Last-Update**: 2022-02-20
+**Last-Update**: 2022-02-21\\
 @@
 
+
+# Message Board ✨
 {{ addcomments }}

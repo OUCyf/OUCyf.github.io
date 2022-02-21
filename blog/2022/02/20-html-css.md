@@ -33,3 +33,16 @@ tags = ["website","html","css","javascript","julia","franklin-jl"]
 <!-- ####################################
           [2]. Content
 #################################### -->
+
+
+table {
+  /* display: block; */
+  margin-bottom: 1em;
+  /* width: 100%; */
+  font-family: -apple-system, BlinkMacSystemFont, "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", Arial, sans-serif;
+  font-size: 0.75em;
+  border-collapse: collapse;
+  overflow-x: auto;
+}
+
+1326 1328
