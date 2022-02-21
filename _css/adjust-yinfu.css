@@ -806,3 +806,173 @@ div .blog-intro {
   background: crimson;
   margin-bottom: 0em;
 }
+
+
+/* ######################### */
+/* [21]. CODE & HIGHLIGHT.JS */
+
+/* a. code box color and size */
+code{
+  font-family:"SFMono-Regular",Menlo,Consolas,Monospace;
+  font-size:12px;
+  line-height:1.4;
+  padding:0.2em 0.15em;
+  font-weight:400;
+  background-color:#f5f6fa;
+  border:1px solid #eeebee; 
+  border-radius:4px;
+  color: #5c5962;
+}
+
+.hljs {
+  font-size: 80%;
+  line-height: 1.35em;
+  border-radius: 10px;
+  padding: 1em;
+  padding-left: 1.2em;
+}
+
+.hljs {
+  display: block;
+  overflow-x: auto;
+  color: #333;
+  background: #f8f8f8;
+}
+
+
+/* b. copy code */
+
+pre {
+  position: relative;
+}
+
+button.copy-code {
+  position: absolute;
+  top: 0.2em;
+  right: 0.3em;
+  background: transparent;
+  border: none;
+  color: #a2a2a2;
+  padding: 0;
+  font-size: 1.2em;
+  display: flex;
+  align-items: center;
+}
+
+.copied-text {
+  font-size: 0.6em;
+  margin-right: 0.2em;
+  text-transform: uppercase;
+}
+
+button.copy-code.clicked {
+  color: rgb(22, 173, 22);
+}
+
+button.copy-code.clicked:hover {
+  color: rgb(22, 173, 22);
+}
+
+button.copy-code:hover {
+  color: #555555;
+}
+
+button.copy-code:focus {
+  outline: none;
+}
+
+
+
+/* c. hode code */
+
+input.hidecode {
+  display: none;
+}
+
+input.hidecode + pre {
+  margin-bottom: 0;
+}
+
+input.hidecode + pre code {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  height: 8em;
+  overflow-y: hidden;
+  box-shadow: inset 0px -19px 9px -20px rgba(0, 0, 0, 0.14);
+  border-bottom: none;
+}
+
+input.hidecode:checked + pre code {
+  height: 100%;
+  box-shadow: none;
+}
+
+label.hidecode {
+  display: block;
+  text-align: center;
+  padding: 0.25em;
+  background: #f8f8f8;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border: 1px solid #eeebee;
+  font-size: var(--small);
+  color: rgb(160, 160, 160);
+  border-top: none;
+  margin-bottom: 2em;
+}
+
+input.hidecode + pre + label.hidecode::after {
+  content: "More";
+  color:#004de6;
+}
+
+input.hidecode:checked + pre + label.hidecode::after {
+  content: "Less";
+}
+
+label.hidecode:hover {
+  color: #5e5e5e;
+}
+
+
+/* video figure */
+.julia-fig  img {
+  width: 80%;
+  text-align: center;
+  margin-left: 10%;
+}
+
+.julia-video video {
+  width: 80%;
+  text-align: center;
+  margin-left: 10%;
+}
+
+
+/* TABLES */
+
+.ctable table {
+  line-height: 1em;
+  margin-left: auto; 
+  margin-right: auto;
+  border-collapse: collapse;
+  text-align: center;
+  margin-bottom: 1.5em;
+}
+
+.ctable tr:first-of-type {
+  background: #eae9f4;
+}
+.ctable tr:first-of-type > th {
+  text-align: center;
+}
+.ctable tr,th,td{
+  padding: 10px;
+  border: 1px solid black;
+}
+
+.ctable table tbody tr td {
+/* border: 1px solid lightgray; */
+border: 1px solid black;
+}
+
