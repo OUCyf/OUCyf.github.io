@@ -1,8 +1,7 @@
 @def title = "Home"
-@def order = 0
+@@banner-container @@
 
 
-~~~ <div class="banner-container"></div> ~~~
 
 # Welcome ✨
 
@@ -20,12 +19,12 @@
 
 ## Education ⏬ ~~~<br>~~~
 
-- **_M.S. in Geological Engineering, 2019 - now_**\
-  🎓 &nbsp; ~~~<span class="small-font"> University of Science and Technology of China </span>~~~\
-  👨‍🏫 &nbsp; ~~~<span class="small-font"> Advisor: Prof. Baoshan Wang </span>~~~\
-- **_B.S. in Geo-Information Science and Technology, 2015 - 2019_**\
-  🎓 &nbsp; ~~~<span class="small-font"> Ocean University of China </span>~~~\
-  👨‍🏫 &nbsp; ~~~<span class="small-font"> Advisor: Prof. Zhihu Zou and Siyou Tong </span>~~~\
+- **_M.S. in Geological Engineering, 2019 - now_**\\
+  🎓 &nbsp; ~~~<span class="small-font"> University of Science and Technology of China </span>~~~\\
+  👨‍🏫 &nbsp; ~~~<span class="small-font"> Advisor: Prof. Baoshan Wang </span>~~~\\
+- **_B.S. in Geo-Information Science and Technology, 2015 - 2019_**\\
+  🎓 &nbsp; ~~~<span class="small-font"> Ocean University of China </span>~~~\\
+  👨‍🏫 &nbsp; ~~~<span class="small-font"> Advisor: Prof. Zhihu Zou and Siyou Tong </span>~~~\\
 
 ## Interests ⏬
 
@@ -40,7 +39,7 @@
 
 @@box-container
   @@box
-    ~~~<a class="boxlink" href="/Research">~~~
+    ~~~<a class="boxlink" href="/research">~~~
     @@title Research 👨‍🔬‍‍ @@
     @@box-content
       @@description
@@ -52,7 +51,7 @@
   @@
 
   @@box
-    ~~~<a class="boxlink" href="/Publication">~~~
+    ~~~<a class="boxlink" href="/publication">~~~
     @@title Publication 📑 @@
     @@box-content
       @@description
@@ -64,7 +63,7 @@
   @@
 
   @@box
-    ~~~<a class="boxlink" href="/blogs">~~~
+    ~~~<a class="boxlink" href="/blog">~~~
     @@title Blog ✍🏻 @@
     @@box-content
       @@description
@@ -76,7 +75,7 @@
   @@
   
   @@box
-    ~~~<a class="boxlink" href="News">~~~
+    ~~~<a class="boxlink" href="/news">~~~
     @@title News 🗞 @@
     @@box-content
       @@description
@@ -88,7 +87,7 @@
   @@
 
   @@box
-    ~~~<a class="boxlink" href="/Resource">~~~
+    ~~~<a class="boxlink" href="/resource">~~~
     @@title Resource 📺 @@
     @@box-content
       @@description
