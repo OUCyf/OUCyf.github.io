@@ -154,7 +154,6 @@ f = Figure()
 
 ax = Axis(f[1, 1], xlabel = "x label", ylabel = "y label",
     title = "Title")
-save("comp_1.png",f)
 save(joinpath(@OUTPUT, "comp_1.png"),f) # hide
 save(joinpath(@OUTPUT, "comp_1.svg"),f) # hide
 f
@@ -238,13 +237,14 @@ round(norm(a), sigdigits=4)
 \show{snippet1}
 
 
-<!-- ```julia:gen
+```julia:gen
 testcsv = "h1,h2,h3
 152,some string, 1.5f0
 0,another string,2.87"
-write("testcsv.csv", testcsv)
+write(joinpath(@OUTPUT,"testcsv.csv"), testcsv)
 ```
-\tableinput{custom h1,custom h2,custom h3}{/testcsv.csv} -->
+
+\tableinput{custom h1,custom h2,custom h3}{./code/output/testcsv.csv}
 
 
 {{ addcomments }}
