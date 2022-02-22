@@ -1,7 +1,7 @@
 +++
-title = "Welcome to My Home 👋 "
+title = "Welcome to my home 👋 "
 descr = """
-    My personal website.
+    my personal website.
     """
 tags = ["hello","Sponsoring"]
 +++

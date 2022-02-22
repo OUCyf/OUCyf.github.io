@@ -1,7 +1,7 @@
 +++
-title = "About This Website &ndash; Overview"
+title = "About the website &ndash; Overview"
 descr = """
-    Generally talk about this website -- Just the Seismology.
+    generally talk about this website -- Just the Seismology.
     """
 tags = ["website","git","CI-CD","github","franklin-jl"]
 +++
@@ -140,6 +140,22 @@ table {
 
 - **utils.jl**: add JTS `utils.jl`.
 
+- **project.tomal**: 
+
+When you have a `project.toml` file, whenever you start the server, Franklin will now activate the environment with that `Project.toml`
+
+```julia-repl
+(1.x) pkg> activate .
+(myWebsite) pkg> add PyCall # add your packages
+```
+
+Once that's done, if you now start the server, Franklin will write
+
+```julia-repl
+julia> serve()
+Activating environment at `~/Desktop/myWebsite/Project.toml`
+```
+
 Now you will get a JTS website from scratch.
 
 
@@ -237,13 +253,14 @@ jobs:
 
 ## History:
 @@small-font
-- 2022-01-20: draft
-- 2022-01-21: full edition
+- 2022-02-20: draft
+- 2022-02-21: full edition
+- 2022-02-22: add `project.tomal` file
 @@
 
 @@colbox-blue,small-font
 **Author**: Fu Yin\\
-**Last-Update**: 2022-02-21
+**Last-Update**: 2022-02-22
 @@
 
 # Message Board ✨
