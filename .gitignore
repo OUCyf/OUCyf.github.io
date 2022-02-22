@@ -9,3 +9,6 @@ package.json
 package-lock.json
 node_modules/
 _libs/lunr/lunr_index.js
+
+# pkg
+Manifest.toml
