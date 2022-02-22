@@ -4,6 +4,7 @@ descr = """
     just test the function of this blog.
     """
 tags = ["test"]
+noeval = false
 +++
 
 
@@ -220,6 +221,8 @@ ss
 
 
 
+
+
 ```plaintext
 cd sksk
 using j
@@ -235,6 +238,8 @@ round(norm(a), sigdigits=4)
 ```
 
 \show{snippet1}
+
+
 
 
 ```julia:gen

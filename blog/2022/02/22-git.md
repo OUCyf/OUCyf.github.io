@@ -1,9 +1,9 @@
 +++
-title = "About This Website &ndash; Git and Deploy"
+title = "Git and github"
 descr = """
-    How to deploy your website with Github CI/CD.
+    how to use git with github.
     """
-tags = ["website","html","css","javascript","julia","franklin-jl"]
+tags = ["git","github"]
 +++
 
 
@@ -18,21 +18,21 @@ tags = ["website","html","css","javascript","julia","franklin-jl"]
 @@
 <!-- b.blog intro -->
 @@blog-intro
-- This blog will introduce the generally framework and technology about this website, which includes html css javascript and how to auto-deploy in github with CI/CD.
-- Generally speaking, JTS website built with by Franklin.jl, Minimal Mistakes, and Julia programming language.
+- This blog will introduce how to manage your package by git.
 @@
 <!-- c.blog tag -->
 {{page_tags}}
 @@
 
 <!-- d.toc -->
-\toc
+<!-- \toc -->
 
 
 
 <!-- ####################################
           [2]. Content
 #################################### -->
+# 1
 
 Remove the files already added to git
 
@@ -51,3 +51,18 @@ git status
 git add .gitignore
 
 git commit -m '.DS_Store banished!'
+
+
+## History:
+@@small-font
+- 2022-02-22: draft
+@@
+
+@@colbox-blue,small-font
+**Author**: Fu Yin\\
+**Last-Update**: 2022-02-22\\
+@@
+
+
+# Message Board ✨
+{{ addcomments }}

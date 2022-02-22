@@ -1,9 +1,9 @@
 +++
-title = "About This Website &ndash; Template"
+title = "Html and css"
 descr = """
-    How to use HTML CSS Javascript in Franklin.jl with Julia.
+    how to use html and css.
     """
-tags = ["website","html","css","javascript","julia","franklin-jl"]
+tags = ["html","css"]
 +++
 
 
