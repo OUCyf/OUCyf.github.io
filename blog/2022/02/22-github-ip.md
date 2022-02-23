@@ -1,5 +1,5 @@
 +++
-title = "Use Github in China"
+title = "Github ip"
 descr = """
     set github ip for china characteristic network
     """
