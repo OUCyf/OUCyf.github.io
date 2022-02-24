@@ -37,6 +37,14 @@ noeval = false
 
 # Welcome ✨
 
+~~~
+<div style="display:block;">
+  <img style="width:40%;height:40%;margin-left:5%;" src="/assets/blog-data/fig/2022-02-24-1.png" />
+  <img style="width:40%;height:40%;margin-left:5%;" src="/assets/blog-data/fig/2022-02-24-2.png"/>
+</div>
+~~~
+
+
 Hello world~ Welcome to my personal website. 🙌
 
 | Name | Description |
@@ -176,6 +184,9 @@ println("SSSsss")
 println("SSSsss")
 
 ```
+
+
+|:--:|居中对齐、|:--|左对齐、|--:|右对齐
 
 @@ctable
 Operation | Cost
