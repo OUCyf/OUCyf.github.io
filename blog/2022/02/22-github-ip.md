@@ -67,7 +67,7 @@ codeload.github.com
 185.199.108.153 assets-cdn.Github.com
 140.82.114.9 codeload.Github.com
 ```
-刷新 hosts `source /etc/hosts`, 并刷新DNS缓存来访问新的映射 `sudo killall -HUP mDNSResponder` for `version > MacOS-10.4`. 刷新完成后，再次打开github网站时速度会明显提升，需要注意的是以上github网站的ip经常发生变化，如果访问再次变慢可以重新更新映射信息。
+刷新 hosts `source /etc/hosts`, 并刷新DNS缓存来访问新的映射 `sudo killall -HUP mDNSResponder` for `version > MacOS-10.4`, 刷新环境变量`source ~/.zshrc`。 刷新完成后，再次打开github网站时速度会明显提升，需要注意的是以上github网站的ip经常发生变化，如果访问再次变慢可以重新更新映射信息。
 
 
 

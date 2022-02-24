@@ -950,6 +950,9 @@ label.hidecode:hover {
 
 
 /* TABLES */
+table{
+  font-size: 1em;
+}
 
 .ctable table {
   line-height: 1em;
