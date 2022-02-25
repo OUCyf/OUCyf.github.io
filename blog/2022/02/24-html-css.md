@@ -1,6 +1,6 @@
 +++
-title = "An Brief Introduction to HTML and CSS"
-descr = "- this blog will introduce the basic conception of HTML and CSS, and also show several examples"
+title = "A Brief Introduction to HTML and CSS"
+descr = ""
 tags = ["html","css"]
 noeval = true
 +++
@@ -17,7 +17,6 @@ noeval = true
 @@
 <!-- b.blog intro -->
 @@blog-intro
-- {{descr}}
 - This blog will introduce the basic conception of HTML and CSS, and also show several examples.
 @@
 <!-- c.blog tag -->

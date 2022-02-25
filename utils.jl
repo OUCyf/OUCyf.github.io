@@ -80,12 +80,12 @@ function hfun_tag_list()
 
         ys, ms, ps = split(surl, '/')[end-2:end]
         date = Date(parse(Int, ys), parse(Int, ms), parse(Int, first(ps, 2)))
-        date_str = Dates.format(date, "U d, Y")
+        date_str = Dates.format(date, "Y-m-d")
 
-        tmp = "* ~~~<span class=\"post-date tag\">$date_str</span><nobr><a href=\"$url\">$title</a></nobr>"
+        tmp = "* ~~~<span class=\"post-date tag\">$date_str</span><nobr><a class=\"blog-title-link\" href=\"$url\">$title</a></nobr>"
         descr = pagevar(rpath, :descr)
         if descr !== nothing
-            tmp *= ": <span class=\"post-descr\">$descr</span>"
+            tmp *= "<div class=\"post-descr\">$descr</div>"
         end
         tmp *= "~~~\n"
         items[date] = tmp
