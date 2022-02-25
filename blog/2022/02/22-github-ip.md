@@ -1,8 +1,6 @@
 +++
-title = "Github ip"
-descr = """
-    set github ip for china characteristic network
-    """
+title = "Set Github IP for China Region"
+descr = ""
 tags = ["ip","dns","github"]
 noeval = true
 +++

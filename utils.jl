@@ -29,12 +29,12 @@ function hfun_posts()
                 # println(pagevar(surl, :navigation))
                 days[i] = parse(Int, first(ps, 2))
                 pubdate = Dates.format(
-                    Date(year, month, days[i]), "U d")
+                    Date(year, month, days[i]), "m-d")
 
-                tmp = "* ~~~<span class=\"post-date\">$pubdate</span><a href=\"$url\">$title</a>"
+                tmp = "* ~~~<div><span class=\"post-date\">$pubdate</span><a class=\"blog-title-link\" href=\"$url\">$title</a></div>"
                 descr = pagevar(surl, :descr)
                 if descr !== nothing
-                    tmp *= ": <span class=\"post-descr\">$descr</span>"
+                    tmp *= "<div class=\"post-descr\">$descr</div>"
                 end
                 lines[i] = tmp * "~~~\n"
             end

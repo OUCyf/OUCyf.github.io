@@ -1,8 +1,6 @@
 +++
-title = "Test Blog ❗️ "
-descr = """
-    just test the function of this blog.
-    """
+title = "Test Blog: "
+descr = "- Just test the function in this blog"
 tags = ["test"]
 noeval = false
 +++

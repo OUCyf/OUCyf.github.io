@@ -1325,9 +1325,9 @@ select:focus {
 table {
   /* display: block; */
   margin-bottom: 1em;
-  /* width: 100%; */
+  width: 100%;
   font-family: -apple-system, BlinkMacSystemFont, "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", Arial, sans-serif;
-  font-size: 0.75em;
+  /* font-size: 0.75em; */
   border-collapse: collapse;
   overflow-x: auto;
 }

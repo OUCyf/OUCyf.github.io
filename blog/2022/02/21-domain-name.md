@@ -1,8 +1,6 @@
 +++
-title = "Buy and bind domain-name in github"
-descr = """
-    bind your own domain-name in github pages.
-    """
+title = "Buy and Bind Domain Name with Github Pages"
+descr = ""
 tags = ["domain-name","dns","website","github"]
 +++
 
