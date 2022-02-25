@@ -3,9 +3,7 @@ pretitle = "GMRES & Conjugate Gradient"
 title = "$pretitle &ndash; pt. I"
 mintoclevel = 2
 
-descr = """
-    Direct and iterative methods for solving a linear system of equations, including GMRES, with code.
-    """
+descr = ""
 tags = ["linear algebra", "code"]
 +++
 

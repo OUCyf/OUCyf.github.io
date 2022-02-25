@@ -1,8 +1,6 @@
 +++
-title = "Git manual"
-descr = """
-    how to use git with github.
-    """
+title = "Git Manual"
+descr = ""
 tags = ["git","github"]
 noeval = true
 +++

@@ -1,8 +1,6 @@
 +++
-title = "About the website &ndash; Overview"
-descr = """
-    generally talk about this website -- Just the Seismology.
-    """
+title = "About the Website &ndash; Overview"
+descr = ""
 tags = ["website","git","CI-CD","github","franklin-jl"]
 +++
 
@@ -130,9 +128,9 @@ Then if you want to get a web like JTS, please refer to following:
 table {
   /* display: block; */
   margin-bottom: 1em;
-  /* width: 100%; */
+  width: 100%;
   font-family: -apple-system, BlinkMacSystemFont, "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", Arial, sans-serif;
-  font-size: 0.75em;
+  /* font-size: 0.75em; */
   border-collapse: collapse;
   overflow-x: auto;
 }
