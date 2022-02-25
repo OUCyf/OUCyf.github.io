@@ -128,7 +128,7 @@ img.masthead-icon {
 
 div.post-descr {
   /* padding-left: 10px; */
-  margin-right:60px;
+  /* margin-right:60px; */
   float: none;
   font-style: italic;
   color: rgb(156, 187, 253);
@@ -139,6 +139,7 @@ div.post-descr {
 a.blog-title-link{
   font-size: 16px;
   color:#494e52;
+  /* font-weight: bold; */
 }
 
 a.blog-title-link:hover{
