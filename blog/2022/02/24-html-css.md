@@ -209,14 +209,14 @@ A html page is quite simple like:
 
 ```html
 <!-- For example -->
-<h3>CHOOSE YOUR SEX</h3>
+<h4>CHOOSE YOUR SEX</h4>
 male:<input type ="radio" name="sex" value="male" checked="checked">
 female:<input type="radio" name="sex" value="female">
 <br><br>
 ```
 
 ~~~
-<h3>CHOOSE YOUR SEX</h3>
+<h4>CHOOSE YOUR SEX</h4>
 male:<input type ="radio" name="sex" value="male" checked="checked">
 female:<input type="radio" name="sex" value="female">
 none:<input type="radio" name="sex" value="none">
@@ -504,11 +504,11 @@ div{
   - 举例: `span`，`strong`，`em`，`a`，`del` 
   - 行级元素自带 css 属性，可更改自带属性`span`自带隐藏属性`display:inline`; 可以通过改成`block`变成块级元素
 
-- 块级元素，`block`
+- 块级元素 `block`
   - 特点: 独占一行, 可以通过 css 改变宽高
   - 举例: `div`，`p`，`ul`，`li`，`ol`，`form`，`address`
 
-- 行级块元素，`inline-block`
+- 行级块元素 `inline-block`
   - 特点: 内容决定大小, 可以改变宽高
   - 我们可以通过`display`更改元素属性，如果写成`display:none`; 元素就没有了 
   - 举例: 
@@ -747,6 +747,7 @@ div{
   <div class="content"> 1 </div>
   <div class="content"> 2 </div>
   <div class="content"> 3 </div>
+</div>
 
 /* 在 css 中 */
 .wrapper{
@@ -771,6 +772,7 @@ div{
   <div class="content"> 1 </div>
   <div class="content"> 2 </div>
   <div class="content"> 3 </div>
+</div>
 
 /* 在 css 中 */
 .wrapper{

@@ -72,6 +72,18 @@ h5 a:visited { color: #1c1c1c !important; }
   z-index: 500;
 }
 
+.darkmode--activated img {
+  filter: invert(100%);
+} 
+.darkmode--activated video {
+  filter: invert(100%);
+} 
+.darkmode--activated iframe {
+  filter: invert(100%);
+} 
+.darkmode--activated .slide-container {
+  filter: invert(100%);
+} 
 
 /* ###################### */
 /* [2].masthead */

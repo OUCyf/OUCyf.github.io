@@ -52,11 +52,16 @@ noeval = true
 - [tmux(or screen)](https://github.com/tmux/tmux)
 
 **The mainly configuration files include:**
-- [`~/.bashrc`](https://github.com/OUCyf/my-terminal-config/tree/main/configuration_files), [`~/.zshrc`](https://github.com/OUCyf/my-terminal-config/tree/main/configuration_files), and [`~/.p10k.zsh`](https://github.com/OUCyf/my-terminal-config/tree/main/configuration_files), stored in [`./configuration_files`](https://github.com/OUCyf/my-terminal-config).
-- [`font`](https://github.com/OUCyf/my-terminal-config/tree/main/fonts) package stored in [`./fonts`](https://github.com/OUCyf/my-terminal-config) 
-- [`Dracula`](https://github.com/OUCyf/my-terminal-config/tree/main/iterm-Dracula) theme for iterm2 in [`./iterm-Dracula`](https://github.com/OUCyf/my-terminal-config) 
+- [`~/.bashrc`](https://github.com/OUCyf/my-terminal-config/tree/main/configuration_files), [`~/.zshrc`](https://github.com/OUCyf/my-terminal-config/tree/main/configuration_files), and [`~/.p10k.zsh`](https://github.com/OUCyf/my-terminal-config/tree/main/configuration_files), stored in my github [`./configuration_files`](https://github.com/OUCyf/my-terminal-config).
+- [`font`](https://github.com/OUCyf/my-terminal-config/tree/main/fonts) package stored in my github [`./fonts`](https://github.com/OUCyf/my-terminal-config) 
+- [`Dracula`](https://github.com/OUCyf/my-terminal-config/tree/main/iterm-Dracula) theme for iterm2 in my github [`./iterm-Dracula`](https://github.com/OUCyf/my-terminal-config) 
 
-
+**Preview**
+~~~
+<div style="display:block;">
+  <img style="width:90%;height:80%;margin-left:5%;" src="/assets/blog-data/fig/2022-02-25-1.jpg"/>
+</div>
+~~~
 
 # Install
 
@@ -92,6 +97,7 @@ $ sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/m
 ```bash
 # install
 $ git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/themes/powerlevel10k
+
 # then open `~/.zshrc` to set `ZSH_THEME`:
 $ ZSH_THEME="powerlevel10k/powerlevel10k
 ```
@@ -106,8 +112,10 @@ Install `oh-my-zsh` plug-in for better user experience. Jump To A Directory That
 ```bash
 # download 'autojump' to '/.oh-my-zsh/custom'
 $ git clone git://github.com/wting/autojump.git $ZSH_CUSTOM/plugins/autojump
+
 # go to 'autojump' folder
 $ cd $ZSH_CUSTOM/plugins/autojump
+
 # python install.py:
 $ ./install.py
 ```
@@ -121,6 +129,7 @@ $ ./install.py
 ```bash
 # git clone
 $ git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+
 # open '~/.zshrc' and set the following line
 $ plugins=(zsh-autosuggestions)
 ```
@@ -131,6 +140,7 @@ $ plugins=(zsh-autosuggestions)
 ```bash
 # git clone
 $ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+
 # open '~/.zshrc' and set the following line
 $ plugins=(zsh-syntax-highlighting)
 ```

@@ -1,7 +1,8 @@
 +++
 title = "Buy and Bind Domain Name with Github Pages"
 descr = ""
-tags = ["domain-name","dns","website","github"]
+tags = ["domain-name"]
+noeval = true
 +++
 
 
@@ -16,7 +17,7 @@ tags = ["domain-name","dns","website","github"]
 @@
 <!-- b.blog intro -->
 @@blog-intro
-- This blog will introduce how to buy a domain-name form **Namesilo**, bind with your website in Github and DNS setting.
+- This blog will introduce how to buy a domain-name from **Namesilo**, bind with your website in Github, and the DNS setting.
 @@
 <!-- c.blog tag -->
 {{page_tags}}
@@ -32,59 +33,59 @@ tags = ["domain-name","dns","website","github"]
 # Buy from Namesilo
 The default domain-name in github pages is `your_name.github.io`, but you can set your own domain-name. Firstly, buy a domain-name; I get `yinfu.info` domain-name from [**Namesilo**](https://www.namesilo.com/), the purchase process show below:
 
-Create an account and check your favorite domain-name whether be used or not. Just buy it. Now use Namesilo to resolve the domain-name: click on the `blue ball` to edit `DNS`; you can sey by yourself or using the template provided below. Generally set `example.com` and `www.example.com` to point to your own server IP address is sufficent, set `A` and `CNAME`:
+Create an account and check your favorite domain-name whether be used or not, then just buy it. Now use **Namesilo** to resolve the domain-name: click on the `blue ball` to edit `DNS`; you can set by yourself or using the template provided below. Generally setting `example.com` and `www.example.com` to point to your own server IP address is sufficent, set `A` and `CNAME`:
 
 
-- My domain-name information:
+- **My domain-name information:**
 
 ![](/assets/blog-data/fig/2022-02-21-2.jpg)
 
+- **For `A`:**
 
+@@ctable
+| HOSTNAME  | TYPE      | ADDRESS/VALUE |
+| :-------: | :-------: | :-----------: |
+| none      | A         | 185.199.108.153 |
+@@
 
+\note{Use `ping OUCyf.github.io` to get id of ADDRESS/VALUE}
 
-- For `A`:
+- **For `CNAME`:**
 
-| HOSTNAME | TYPE | ADDRESS/VALUE|
-|-----------|-----------|-----------|
-| none | A | 185.199.108.153 |
-
-\note{
-Use `ping OUCyf.github.io` to get id of ADDRESS/VALUE
-}
-
-- For `CNAME`:
-
+@@ctable
 | HOSTNAME | TYPE | ADDRESS/VALUE|
 |-----------|-----------|-----------|
 | www | CNAME | oucyf.github.io |
+@@
 
-
-- My setting screenshot:
+- **The screenshot of my setting:**
 
 ![](/assets/blog-data/fig/2022-02-21-1.jpg)
 
 
-- Renew domains
+- **Renew domains**
 
-    click `Renew Domains` then `CHECKOUT`.
+    Click `Renew Domains` then `CHECKOUT`.
 
 
 
 
 # Bind with Github
 
-Add the CNAME file to the github Pages repository at root directory and write your domain name inside:
+Add the `CNAME` file to the github Pages repository at root directory and write your domain name inside:
 
 ![](/assets/blog-data/fig/2022-02-21-3.jpg)
 
 
-Or set `custom domain` directly to `Github Pages` in `Settings` of github. Github will automatically adds the CNAME file.
+Or set `custom domain` directly to `Github Pages` in `Settings` of github. Github will automatically adds the `CNAME` file.
 
 
 ![](/assets/blog-data/fig/2022-02-21-4.jpg)
 
-Enforce `HTTPS` which provides a layer of encryption that prevents others from snooping on or tampering with traffic to your site. When `HTTPS` is enforced, your site will only be served over `HTTPS`.
+Enforce `HTTPS` which provides a layer of encryption that prevents others from snooping on or tampering with traffic to your site. When `HTTPS` is enforced, your site will only be served over `HTTPS` instead of `HTTP`.
 
+
+# End
 
 ## References
 1. [Segmentfault](https://segmentfault.com/a/1190000011203711)
@@ -99,7 +100,7 @@ Enforce `HTTPS` which provides a layer of encryption that prevents others from s
 
 @@colbox-blue,small-font
 **Author**: Fu Yin\\
-**Last-Update**: 2022-02-21
+**Last-Update**: 2022-02-26
 @@
 
 # Message Board ✨

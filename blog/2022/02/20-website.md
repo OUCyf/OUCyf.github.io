@@ -2,6 +2,7 @@
 title = "About the Website &ndash; Overview"
 descr = ""
 tags = ["website","git","CI-CD","github","franklin-jl"]
+noeval = true
 +++
 
 
@@ -16,8 +17,8 @@ tags = ["website","git","CI-CD","github","franklin-jl"]
 @@
 <!-- b.blog intro -->
 @@blog-intro
-- This blog will introduce the generally framework and technology about this website, which includes html css javascript and how to auto-deploy in github with CI/CD.
-- Generally speaking, JTS website built with by Franklin.jl, Minimal Mistakes, and Julia programming language.
+- This blog will introduce the generally framework and the key technology about this website, which includes html css javascript and how to auto-deploy in github with CI/CD.
+- Generally speaking, the website built with by Franklin.jl, Minimal Mistakes, and Julia programming language.
 @@
 <!-- c.blog tag -->
 {{page_tags}}
@@ -48,7 +49,7 @@ tags = ["website","git","CI-CD","github","franklin-jl"]
 - [minimal-mistakes.css](https://tlienart.github.io/FranklinTemplates.jl/templates/minimal-mistakes/index.html)
 - [franklin.css](https://tlienart.github.io/FranklinTemplates.jl/templates/minimal-mistakes/index.html)
 - [bootstrap.css](https://getbootstrap.com/)
-- [adjust-yinfu.css](https://github.com/OUCyf/OUCyf.github.io): my personal css.
+- [adjust-yinfu.css](https://github.com/OUCyf/OUCyf.github.io): **_my personal css_**.
 
 **Javascript**
 - [node.js](https://nodejs.org/en/)
@@ -72,19 +73,19 @@ tags = ["website","git","CI-CD","github","franklin-jl"]
 **git** usage: please refer to [git](/blog/2022/02/20-git/) document; **html-css** usage: please refer to [html-css](/blog/2022/02/20-html-css/) document.
 }
 
-## Quick start
+## Quick Start
 
 Clone repository with git:
 
 ```bash
-> git clone git@github.com:OUCyf/OUCyf.github.io.git
-> cd OUCyf.github.io
-> npm install lunr
-> npm install cheerio
+$ git clone git@github.com:OUCyf/OUCyf.github.io.git
+$ cd OUCyf.github.io
+$ npm install lunr
+$ npm install cheerio
 ```
 (you might have to add `sudo` before `npm`).
 
-To install Franklin with Julia **≥ 1.7**,
+Install Franklin with **Julia ≥ 1.7**,
 
 ```julia-repl
 (v1.7) pkg> add Franklin
@@ -107,7 +108,7 @@ If you navigate to that URL in your browser, you will see the website. If you th
 
 
 
-## Build from scratch
+## Build from Scratch
 
 Build new template from `FranklinTemplate.jl`
 
@@ -119,10 +120,10 @@ julia> serve()
 
 Then if you want to get a web like JTS, please refer to following:
 
-- **CSS**: compare `mtSite` with `JTS`, do not change `franklin.css` and `minimal-mistakes.css` in `_css` folder, add `adjust-yinfu.css` and `bootstrap.min.css` into folder.
+- **CSS**: compare `mySite` with `JTS`, do not change `franklin.css` and `minimal-mistakes.css` in `_css` folder, add `adjust-yinfu.css` and `bootstrap.min.css` into folder.
 - **Javascript**: add `lunr.js` `navbar.js` `pad.js` `slider.js` into `_libs` folder.
 - **HTML**: modify your own `HTML` files in `_layout` folder.
-- **Adjust**: hide line 1326 and 1328 in `minimal-mistakes.css` as following:
+- **Adjust**: hide line 1326 and 1330 in `minimal-mistakes.css` as following to avoid confusing font lines in markdown `table`:
 
 ```css
 table {
@@ -136,60 +137,58 @@ table {
 }
 ```
 
-- **utils.jl**: add JTS `utils.jl`.
+- **utils.jl**: add my `utils.jl`.
 
-- **project.tomal**: 
-
-When you have a `project.toml` file, whenever you start the server, Franklin will now activate the environment with that `Project.toml`
+- **project.tomal**: When you have a `project.toml` file, whenever you start the server, Franklin will auto activate the environment with the `Project.toml`
 
 ```julia-repl
-(1.x) pkg> activate .
-(myWebsite) pkg> add PyCall # add your packages
+(1.x) pkg> activate .         # create your own Project.toml
+(myWebsite) pkg> add PyCall   # add your packages
 ```
 
-Once that's done, if you now start the server, Franklin will write
+- Once that's done, if you now start the server, Franklin will write
 
 ```julia-repl
 julia> serve()
 Activating environment at `~/Desktop/myWebsite/Project.toml`
 ```
 
-Now you will get a JTS website from scratch.
+Now you will get a new website from scratch.
 
 
 ## Deploying on Github
 
-### Creating a repo
-Your repository must be named username.github.io for a personal website, but for a project website it diff, please refer to Franklin.jl [document](https://franklinjl.org/workflow/deploy/).
+### Creating a Repo
+Your repository must be named `username.github.io` for a personal website. But for a project website it diff, please refer to Franklin.jl [document](https://franklinjl.org/workflow/deploy/).
 
-### Synchronise your local folder
-I usually have 3 branches, `master` branch is used to release new version; `dev` branch is used to write new blogs and have other changes; when the new blogs or code test passed in `dev` branch, `merge` branch `dev` into `master` branch. Now you can release your new website. The third branch `gh-pages` is used to store the html file. In your terminal, `cd` to your website folder and follow the steps below:
+### Synchronise your Local Folder
+I usually have 3 branches, `master` branch is used to release new version; `dev` branch is used to write new blogs and have other changes; when the new blogs or code test passed in `dev` branch, `merge` `dev` branch into `master` branch. Now you can release your new website. The third branch `gh-pages` is used to store the html file. In your terminal, `cd` to your website folder and follow the steps below:
 
 - In `dev` branch:
 ```bash
-> cd OUCyf.github.io
-> git switch dev
-> git add .
-> git commit -m "new blogs"
-> git push origin dev
-> git swtich master
+$ cd OUCyf.github.io
+$ git switch dev
+$ git add .
+$ git commit -m "new blogs"
+$ git push origin dev
+$ git swtich master
 ```
 
 - In `master` branch:
 ```bash
-> git diff master dev # find the difference between master and dev branch
-> git merge --no-ff -m "merge dev with new blogs" dev
-> git status # check out the status
-> git push origin master
-> git switch dev # do next change
+$ git diff master dev      # find the difference between master and dev branch
+$ git merge --no-ff -m "merge dev with new blogs" dev
+$ git status               # check out the status
+$ git push origin master
+$ git switch dev           # do next change
 ```
 
-the GitHub action will be triggered and deploy the content of the `__site` folder to the `gh-pages` branch from which GitHub will deploy the website. The final step is to tell GitHub to deploy the gh-pages branch, for this, on the repository go to `Settings` then scroll down to `GitHub Pages` and in the `Source` dropdown, pick `gh-pages`.
+the **GitHub Action** will be triggered and deploy the content of the `__site` folder to the `gh-pages` branch from which GitHub will deploy the website. The final step is to tell GitHub to deploy the gh-pages branch, for this, on the repository go to `Settings` then scroll down to `GitHub Pages` and in the `Source` dropdown, pick `gh-pages`.
 
 Your website should now be online.
 
-### Customising the GitHub action
-Modify the file `.github/workflows/deploy.yml` in site folder, my `deploy.yml` show below:
+### Customising the GitHub Action
+Modify the file `.github/workflows/deploy.yml`, my `deploy.yml` show below:
 ```YAML
 name: Build and Deploy
 on:
@@ -228,7 +227,7 @@ jobs:
     #   specific arguments, see the documentation or ?optimize in the REPL.
     - run: julia -e '
             using Pkg; 
-            Pkg.add(["NodeJS", "Franklin", "OrderedCollections", "Makie"]);
+            Pkg.add(["NodeJS", "Franklin"]);
             using NodeJS; 
             run(`$(npm_cmd()) install highlight.js`);
             run(`$(npm_cmd()) install lunr`);
@@ -244,12 +243,12 @@ jobs:
       with:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         BRANCH: gh-pages  # store html files
-        FOLDER: __site  # folder
+        FOLDER: __site    # folder
 ```
 
 
 
-## History:
+# History:
 @@small-font
 - 2022-02-20: draft
 - 2022-02-21: full edition
@@ -258,7 +257,7 @@ jobs:
 
 @@colbox-blue,small-font
 **Author**: Fu Yin\\
-**Last-Update**: 2022-02-22
+**Last-Update**: 2022-02-26
 @@
 
 # Message Board ✨

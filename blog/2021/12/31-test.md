@@ -18,7 +18,6 @@ noeval = false
 <!-- b.blog intro -->
 @@blog-intro
 - Hey guys 💗
-- 你好呀 💗
 @@
 <!-- c.blog tag -->
 {{page_tags}}
@@ -32,66 +31,179 @@ noeval = false
 <!-- ####################################
           [2]. Content
 #################################### -->
+# Title
 
-# Welcome ✨
+## Un-ordered List 
+```plaintext
+- item 1
+- item 2
+  - sub-item 1
+    - sub-item 1
+      - sub-item 1
+```
+- item 1
+- item 2
+  - sub-item 1
+    - sub-item 1
+      - sub-item 1
+
+
+## Order List
+```plaintext
+1. item 1
+1. item 2
+    10. dddd
+    10. dddd
+        22. aaaa
+        22. aaaa
+```
+1. item 1
+1. item 2
+    10. dddd
+    10. dddd
+        22. aaaa
+        22. aaaa
+
+
+
+
+# Cite
+```plaintext
+see e.g. \cite{bg97}
+
+see e.g. \citep{bg97}
+```
+see e.g. \cite{bg97}
+
+see e.g. \citep{bg97}
+
+
+
+# Figure and Table
+
+## Figure
+
+```html
+<div style="display:block;">
+  <img style="width:40%;height:40%;margin-left:5%;" src="/assets/blog-data/fig/2022-02-24-1.png"/>
+  <img style="width:40%;height:40%;margin-left:5%;" src="/assets/blog-data/fig/2022-02-24-2.png"/>
+</div>
+```
 
 ~~~
 <div style="display:block;">
-  <img style="width:40%;height:40%;margin-left:5%;" src="/assets/blog-data/fig/2022-02-24-1.png" />
+  <img style="width:40%;height:40%;margin-left:5%;" src="/assets/blog-data/fig/2022-02-24-1.png"/>
   <img style="width:40%;height:40%;margin-left:5%;" src="/assets/blog-data/fig/2022-02-24-2.png"/>
 </div>
+<br><br>
 ~~~
 
 
-Hello world~ Welcome to my personal website. 🙌
+## Markdown table
 
-| Name | Description |
-| ---- | ----------- |
-| | |
+- 以下 Markdown 语法失效:
+  - |:--:| 居中对齐
+  - |:--| 左对齐
+  - |--:| 右对齐
 
-@@alert,alert-info
-**NOTE❗️**: none.
+```plaintext
+| Heading 1 | Heading 2 | Heading 3 |
+| --------- | --------- | --------- |
+| LaTeX     | KaTeX     | MikTeX    |
+| LaTeX     | KaTeX     | MikTeX    |
+```
+
+| Heading 1 | Heading 2 | Heading 3 |
+| --------- | --------- | --------- |
+| LaTeX     | KaTeX     | MikTeX    |
+| LaTeX     | KaTeX     | MikTeX    |
+
+
+## Frnaklin table
+
+```plaintext
+@@ctable
+| Operation                    | Cost |
+| :--------------------------- | :--- |
+|initial computation of $X^tX$ | $O(np^2)$ |
+|initial SVD of $X^tX$         | $O(p^3)$ |
+|computation of $VD_λz$        | $O(p^2)$ per $λ$ |
+@@
+```
+
+@@ctable
+| Operation                    | Cost |
+| :--------------------------- | :--- |
+|initial computation of $X^tX$ | $O(np^2)$ |
+|initial SVD of $X^tX$         | $O(p^3)$ |
+|computation of $VD_λz$        | $O(p^2)$ per $λ$ |
 @@
 
+
+
+
+
+# Annotation
+
+
+## Blue
+```plaintext
+@@alert,alert-info
+**NOTE**: none.
+@@
+```
+@@alert,alert-info
+**NOTE**: none.
+@@
+
+
+## Gray
+```plaintext
+> **Note**: none.
+```
 > **Note**: none.
 
 
-
+## Annotation
+```plaintext
+@@colbox-blue,small-font
+**Author**: Fu Yin\\
+**Last-Update**: 2022-02-20
+@@
+```
 @@colbox-blue,small-font
 **Author**: Fu Yin\\
 **Last-Update**: 2022-02-20
 @@
 
-\note{If you already have experience with Franklin and just want to keep an eye on (new) tips and tricks, have a look at the short [demos](/demos/)
-}
 
-\warn{If you already have experience with Franklin and just want to keep an eye on (new) tips and tricks, have a look at the short [demos](/demos/)
-}
+## Note
+```plaintext
+\note{note here...}
+```
+\note{note here...}
 
 
-| Name | Source | License | Navbar | JS  |
-| ---- | ------ | ------- | ----- | --- |
-| `"sandbox"`  | N/A    | MIT     | N/A | No |
-| `"sandbox-extended"`  | N/A    | MIT     | N/A | No |
-| `"basic"`  | N/A    | MIT     | Top | No |
-| `"jemdoc"` | [jemdoc](https://github.com/jem/jemdoc) | N/A | Side | No |
-| `"hypertext"` | [grav theme hypertext](https://github.com/artofthesmart/hypertext) | [MIT](https://github.com/artofthesmart/hypertext/blob/master/LICENSE) | Top | No |
-| `"pure-sm"` | [pure css](https://purecss.io/layouts/side-menu/) | [Yahoo BSD](https://github.com/pure-css/pure-site/blob/master/LICENSE.md) | Side | No |
-| `"vela"` | [grav theme vela](https://github.com/danzinger/grav-theme-vela) | [MIT](https://github.com/danzinger/grav-theme-vela/blob/develop/LICENSE) | Side (collapsable) | Yes |
-| `"tufte"` | [Tufte CSS](https://github.com/edwardtufte/tufte-css), and a bit of [Lawler.io](https://github.com/Eiriksmal/lawler-dot-io) for the menu | [both](https://github.com/edwardtufte/tufte-css/blob/gh-pages/LICENSE)  [MIT](https://github.com/Eiriksmal/lawler-dot-io/blob/main/license.md) | Side | No |
-| `"hyde"` | [Hyde](https://github.com/poole/hyde) | [MIT](https://github.com/poole/hyde/blob/master/LICENSE.md) | Side | No |
-| `"lanyon"` | [Lanyon](https://github.com/poole/lanyon) | [MIT](https://github.com/poole/lanyon/blob/master/LICENSE.md) | Side (collapsable) | No |
-| `"just-the-docs"` | [Just the docs](https://github.com/pmarsceill/just-the-docs) | [MIT](https://github.com/pmarsceill/just-the-docs/blob/master/LICENSE.txt) | Side/Top | No |
-| `"minimal-mistakes"` | [Minimal mistakes](https://github.com/mmistakes/minimal-mistakes) | [MIT](https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE) | Side/Top | No |
+## Warn
+```plaintext
+\warn{warn here...}
+```
+\warn{warn here...}
 
 
 
 
-## vedio
 
-~~~
-<input id="hidecode" class="hidecode" type="checkbox">
-~~~
+
+
+
+# Run Julia
+
+## Video
+
+I use `julia:lorenz...` which mean the name of this script will be the `lorenz.jl`. 
+
+~~~<input id="hidecode" class="hidecode" type="checkbox">~~~
 ```julia:lorenz
 using GLMakie
 GLMakie.activate!() # hide
@@ -138,106 +250,48 @@ record(fig, joinpath(@OUTPUT,"lorenz.mp4"), 1:120) do frame
     l.colorrange = (0, frame)
 end
 set_theme!() # hide
-println("sssssss")
 ```
-~~~
-<label for="hidecode" class="hidecode"></label>
-~~~
+~~~<label for="hidecode" class="hidecode"></label>~~~
 
-@@julia-video \video{lorenz.mp4, autoplay = true} @@
-
-
+@@julia-video 
+\video{lorenz.mp4, autoplay = true} 
+@@
 
 
 
-hhhhe1
 
 
-```!
+## Figure
+I use `julia:plot-fig...` which mean the name of this script will be the `plot-fig.jl`
+
+```julia:plot-fig
 using CairoMakie
 CairoMakie.activate!() # hide
-
 f = Figure()
-
 ax = Axis(f[1, 1], xlabel = "x label", ylabel = "y label",
     title = "Title")
-save(joinpath(@OUTPUT, "comp_1.png"),f) # hide
 save(joinpath(@OUTPUT, "comp_1.svg"),f) # hide
-f
 ```
 
-@@julia-fig \fig{comp_1.svg}@@
+@@julia-fig 
+\fig{comp_1.svg}
+@@
 
+
+
+## Println
+I use `!...` which mean print the output, and there will be a output below.
 
 ```!
-println("SSSsss")
-println("SSSsss")
-println("SSSsss")
-
-```
-
-```julia:tr
-println("222SSSsss")
-println("SSSsss")
-println("SSSsss")
-
+a = 1+10
+println("Hello")
+println("你好")
+println("a=",a)
 ```
 
 
-|:--:|居中对齐、|:--|左对齐、|--:|右对齐
-
-@@ctable
-Operation | Cost
-:--- | :---
-initial computation of $X^tX$ | $O(np^2)$
-initial SVD of $X^tX$ | $O(p^3)$
-computation of $VD_λz$ | $O(p^2)$ per $λ$
-@@
-
-@@ctable
-Operation | Dominating Cost
-:--- | :---
-initial computation of $XX^t$ | $O(pn^2)$
-initial SVD of $XX^t$ | $O(n^3)$
-initial computation of $w = U^ty$ | $O(pn)$
-computation of $X^t U D_λ w$ | $O(np)$ per $λ$
-@@
-
-
-| Heading 1 | Heading 2 | Heading 3 |
-|-----------|-----------|-----------|
-| LaTeX     | KaTeX     | MikTeX    |
-
-s
----
-
-ss
----
-
-* item 1
-* item 2
-  * sub-item 1
-    * sub-item 1
-      * sub-item 1
-
-
-1. item 1
-1. item 2
-  1. d
-  1. subitem 1
-    22. d
-    1. dd
-
-
-
-
-
-```plaintext
-cd sksk
-using j
-kdkd
-```
-
+## Show
+Use `\show{snippet1}` will also show the result
 
 ```julia:snippet1
 using LinearAlgebra, Random
@@ -251,6 +305,14 @@ round(norm(a), sigdigits=4)
 
 
 
+
+
+
+
+
+## Tableinput
+
+
 ```julia:gen
 testcsv = "h1,h2,h3
 152,some string, 1.5f0
@@ -261,4 +323,28 @@ write(joinpath(@OUTPUT,"testcsv.csv"), testcsv)
 \tableinput{custom h1,custom h2,custom h3}{./code/output/testcsv.csv}
 
 
+
+
+
+
+
+
+
+# End
+
+## References
+1. \biblabel{bg97}{Beatson and Greengard (1997)} **Beatson**, **Greengard**, [A short course on fast multipole methods](https://math.nyu.edu/~greengar/shortcourse_fmm.pdf), 1997.
+
+## History:
+@@small-font
+- 2022-02-25: draft
+@@
+
+@@colbox-blue,small-font
+**Author**: Fu Yin\\
+**Last-Update**: 2022-02-26\\
+@@
+
+
+# Message Board ✨
 {{ addcomments }}
