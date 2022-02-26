@@ -33,12 +33,14 @@ noeval = true
 #################################### -->
 # China Characteristic
 
-`Github` 没有被墙, 但由于 DNS 解析出现污染, 导致访问 `GitHub` 的域名在中国异常的慢。 如果域名解析直接指向 `GitHub` 的 IP 地址, 以此来绕过DNS 解析, 可加速访问`GitHub`。因此国内有 programer 专门解析维护 `GitHub` 的 IP 解析地址, 实时查看GitHub的解析地址可查询网站 [ipaddress](https://ipaddress.com/website/www.github.com)。 将查询到的 IP 添加到 `/etc/hosts` 文件中, 并刷新 `source /etc/hosts`.
+- 在中国 `Github` 没有被墙, 但由于 DNS 解析出现污染, 导致访问 `GitHub` 的域名在中国访问异常的慢。 如果域名解析直接指向 `GitHub` 的 IP 地址, 以此来绕过 DNS 解析, 可加速访问`GitHub`。
+- 因此国内有 programer 专门解析维护 `GitHub` 的 IP 解析地址, 实时查看GitHub的解析地址可查询网站 [ipaddress](https://ipaddress.com/website/www.github.com)。 将查询到的 IP 添加到 `/etc/hosts` 文件中, 并刷新 `source ~/.zshrc`.
 
-## 手动更新
+# 手动更新
 
-### 查看最新GitHub 的最新ip地址
-在 [ipaddress](https://ipaddress.com/website/www.github.com) 网站查询GitHub相关的网站对应的最新IP地址, 通常查询下述4个域名:
+**查看最新GitHub 的最新ip地址:**
+
+在 [ipaddress](https://ipaddress.com/website/www.github.com) 网站查询 GitHub 相关网站对应的最新IP地址, 通常查询下述4个域名:
 
 ```plaintext
 github.com
@@ -54,23 +56,27 @@ codeload.github.com
 - [assets-cdn.github.com.ipaddress.com/](http://assets-cdn.github.com.ipaddress.com/)\\
 - [codeload.github.com.ipaddress.com/](http://codeload.github.com.ipaddress.com/)\\
 
-### 修改本地hosts文件映射ip地址
-找到对应的IP地址后，将IP地址与网站地址进行对应，并将对应关系写入本地hosts文件中, 修改 `sudo vim /etc/hosts`。
+
+**修改本地hosts文件映射ip地址:**
+
+找到对应的 IP 地址后，将 IP 地址与网站地址进行对应，并将对应关系写入本地 hosts 文件中, 修改 `sudo vim /etc/hosts`。
+
 > hosts文件直接编辑修改时需要权限
 
 ```bash
+# in /etc/hosts file:
 # Github-DNS 映射格式如:  [ip] [domainName]
 199.232.69.194 github.global.ssl.Fastly.net
 140.82.114.4 GitHub.com
 185.199.108.153 assets-cdn.Github.com
 140.82.114.9 codeload.Github.com
 ```
-刷新 hosts `source /etc/hosts`, 并刷新DNS缓存来访问新的映射 `sudo killall -HUP mDNSResponder` for `version > MacOS-10.4`, 刷新环境变量`source ~/.zshrc`。 刷新完成后，再次打开github网站时速度会明显提升，需要注意的是以上github网站的ip经常发生变化，如果访问再次变慢可以重新更新映射信息。
+刷新`source /etc/hosts`, 并刷新DNS缓存来访问新的映射 `sudo killall -HUP mDNSResponder` for `version > MacOS-10.4`, 刷新环境变量`source ~/.zshrc`。 刷新完成后，再次打开github网站时速度会明显提升，需要注意的是以上github网站的ip经常发生变化，如果访问再次变慢可以重新更新映射信息。
 
 
 
-## 自动更新
-实时更新 `GitHub` 相关 IP 的项目 [GitHub520](https://github.com/521xueweihan/GitHub520), 项目服务器网站 [HelloGitHub 镜像站](https://raw.hellogithub.com/)。 参考 [知乎](https://zhuanlan.zhihu.com/p/394470267) 网友提供的 `Python` 自动化脚本，实时 `request GitHub520` 提供的 IP, 并自动修改 `/etc/hosts` 文件, 代码如下:
+# 自动更新
+实时更新 `GitHub` 域名解析 IP 的项目 [GitHub520](https://github.com/521xueweihan/GitHub520), 项目服务器网站 [HelloGitHub 镜像站](https://raw.hellogithub.com/)。 参考 [知乎](https://zhuanlan.zhihu.com/p/394470267) 网友提供的 `Python` 自动化脚本，实时获取` GitHub520`提供的 IP, 并自动修改 `/etc/hosts` 文件, 代码如下:
 
 ~~~<input id="hidecode-2" class="hidecode" type="checkbox">~~~
 <!-- \input{python}{/assets/blog-data/script/update-host-github.py}   -->
@@ -164,7 +170,7 @@ if __name__ == '__main__':
 
 
 
-\note{修改系统文件权限: `sudo python xxx.python`, 记得将原始文件进行备份; 会更新修改 line from `# GitHub520 Host Start` to `# GitHub520 Host End` 之间的内容, 不会删除或修改其他内容。}
+\note{修改系统文件需要权限: `sudo python xxx.python`, 记得将原始文件进行备份; 该脚本会更新修改 line from `# GitHub520 Host Start` to `# GitHub520 Host End` 之间的内容, 不会删除或修改其他内容。}
 
 文件 `/etc/hosts` 修改内容示例:
 
@@ -220,8 +226,9 @@ if __name__ == '__main__':
 
 
 
-## `Optional`: 禁用 web 代理，例如 http.proxy
-Git push 时如果设置了代理可能会出现下述错误，参考[SSL_connect: SSL_ERROR_SYSCALL...:443](https://blog.csdn.net/daerzei/article/details/79528153):
+# 禁用代理(可选)
+
+参考 [SSL_connect: SSL_ERROR_SYSCALL...:443](https://blog.csdn.net/daerzei/article/details/79528153), `git push` 时如果设置了代理可能会出现下述错误
 
 ```bash
 # error example:
@@ -234,6 +241,9 @@ Git支持三种网络协议: `git://`, `ssh://`, and `http://`. 本来push的时
 ```bash
 git config --global --unset http.proxy
 ```
+
+
+# End
 
 ## References
 1. [https://blog.nowcoder.net/n/f78e6efcaefe4c6b81fd1ef2c00c3a47](https://blog.nowcoder.net/n/f78e6efcaefe4c6b81fd1ef2c00c3a47)
@@ -252,7 +262,7 @@ git config --global --unset http.proxy
 
 @@colbox-blue,small-font
 **Author**: Fu Yin\\
-**Last-Update**: 2022-02-22\\
+**Last-Update**: 2022-02-26\\
 @@
 
 
