@@ -1157,6 +1157,8 @@ ul li a.active{
 ## References
 
 1. [腾讯课堂_2022新版HTML+CSS零基础入学](https://ke.qq.com/course/231570?taid=2955805083273362) (**_推荐_**)
+1. [Font-Awesome-1](https://astronautweb.co/snippet/font-awesome/)
+1. [Font-Awesome-2](https://www.runoob.com/font-awesome/fontawesome-tutorial.html)
 
 ## History:
 @@small-font
