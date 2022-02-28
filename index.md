@@ -10,7 +10,7 @@
   @@intro
   I'm **Fu Yin** 👋 , a graduate student in the **[University of Science and Technology of China](https://en.ustc.edu.cn/)**, advised by Prof. [Baoshan Wang](http://ess.ustc.edu.cn/faculties/detail-207.html). I received bachelor degree in Geophysics from **[Ocean University of China](http://eweb.ouc.edu.cn/)**.
 
-  My research focus on **seismology**, including earthqauke sources, ambient noise monitoring and imaging. Recently interested in the combination with Distributed Acoustic Sensing **(DAS)** and **Cloud Compuating**. I am also interested in uncertainty assessment of the seismic inversion, especially using **Bayesian Inference**.
+  My research focus on **seismology**, including earthqauke sources, ambient noise monitoring and imaging. Recently interested in the combination with Distributed Acoustic Sensing **(DAS)** and **Cloud Computing**. I am also interested in uncertainty assessment of the seismic inversion, especially using **Bayesian Inference**.
 
   And I'm a big fan of open-source community and espousing programming with  [💻 Julia](https://julialang.org/) and [💻 Python](/).
   @@
