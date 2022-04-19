@@ -22,7 +22,7 @@ function cloudshape(height, args...; backgroundcolor=(0, 0, 0, 0))
     return d
 end
 
-words = repeat(["just", "the", "seismology"], 70)
+words = repeat(["note","book", "seismology"], 70)
 weights = randexp(length(words)) .* 2000 .+ rand(20:100, length(words));
 # weights = repeat([1], length(words))
 wc = wordcloud(
@@ -43,38 +43,38 @@ paint(wc, "logo2.png", background=false)
 ##############################
 ## 1. gif
 ##############################
-textfile = "./docs/docs.txt"
-wc = wordcloud(
-    processtext(open(textfile), maxweight=1, maxnum=300), 
-    mask=shape(ellipse, 600, 400, color=(0.98, 0.97, 0.99), backgroundsize=(700, 450)),  # , backgroundcolor=1
-    colors=:seaborn_icefire_gradient,
-    angles=-90:90,
-    font = "JuliaMono Black",
-    state=identity, # turn off the useless initword! and placewords! in advance
-)
+# textfile = "./docs/docs.txt"
+# wc = wordcloud(
+#     processtext(open(textfile), maxweight=1, maxnum=300), 
+#     mask=shape(ellipse, 600, 400, color=(0.98, 0.97, 0.99), backgroundsize=(700, 450)),  # , backgroundcolor=1
+#     colors=:seaborn_icefire_gradient,
+#     angles=-90:90,
+#     font = "JuliaMono Black",
+#     state=identity, # turn off the useless initword! and placewords! in advance
+# )
 
-setwords!(wc, "source", "Just the Seismology") # replace the word 'Alice' with 'Alice in Wonderland'
-setangles!(wc, "Just the Seismology", 0) # make it horizontal
-setcolors!(wc, "Just the Seismology", "purple");
-setfontsizes!(wc, "Just the Seismology", size(wc.mask, 2) / length("Just the Seismology"))
-initword!(wc, "Just the Seismology")
-r = size(wc.mask, 2) / size(getimages(wc, "Just the Seismology"), 2) * 0.95
-setfontsizes!(wc, "Just the Seismology", r * size(wc.mask, 2) / length("Just the Seismology")) # set a big font size
-initword!(wc, "Just the Seismology") # init it after adjust it's style
-setpositions!(wc, "Just the Seismology", reverse(size(wc.mask)) .÷ 2, type=setcenter!) # center it
+# setwords!(wc, "source", "Just the Seismology") # replace the word 'Alice' with 'Alice in Wonderland'
+# setangles!(wc, "Just the Seismology", 0) # make it horizontal
+# setcolors!(wc, "Just the Seismology", "purple");
+# setfontsizes!(wc, "Just the Seismology", size(wc.mask, 2) / length("Just the Seismology"))
+# initword!(wc, "Just the Seismology")
+# r = size(wc.mask, 2) / size(getimages(wc, "Just the Seismology"), 2) * 0.95
+# setfontsizes!(wc, "Just the Seismology", r * size(wc.mask, 2) / length("Just the Seismology")) # set a big font size
+# initword!(wc, "Just the Seismology") # init it after adjust it's style
+# setpositions!(wc, "Just the Seismology", reverse(size(wc.mask)) .÷ 2, type=setcenter!) # center it
 
-pin(wc, "Just the Seismology") do
-    initwords!(wc) # init inside `pin` to reset the size of other words
-    generate!(wc)
-end
-paint(wc, "custom-2.png")
+# pin(wc, "Just the Seismology") do
+#     initwords!(wc) # init inside `pin` to reset the size of other words
+#     generate!(wc)
+# end
+# paint(wc, "custom-2.png")
 
 
-gifdirectory = "animation-1"
-pin(wc, "Just the Seismology") do
-    initwords!(wc) # init inside `pin` to reset the size of other words
-    @record gifdirectory overwrite=false generate!(wc, 100, optimiser=WordCloud.Momentum())
-end 
+# gifdirectory = "animation-1"
+# pin(wc, "Just the Seismology") do
+#     initwords!(wc) # init inside `pin` to reset the size of other words
+#     @record gifdirectory overwrite=false generate!(wc, 100, optimiser=WordCloud.Momentum())
+# end 
 
 
 ##############################

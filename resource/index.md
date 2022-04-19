@@ -141,6 +141,11 @@ Just-The-Seismology: a personal website template designed for scientific researc
 School of Earth and Space Sciences, <strong>USTC</strong>
 </a>~~~
 
+
+-~~~<a class="link-university" href="https://geophy.pku.edu.cn/">
+School of Earth and Space Sciences, <strong>Peking</strong>
+</a>~~~
+
 -~~~<a class="link-university" href="http://www.igg.cas.cn/">
 Institute of Geology and Geophysics, <strong>Chinese Academy of Sciences</strong>
 </a>~~~

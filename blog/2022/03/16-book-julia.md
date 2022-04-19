@@ -56,6 +56,19 @@ noeval = true
 
 我采用 Latex+Julia 的方案
 
+```bash
+ERROR: After October 2020 you may experience errors when installing or updating packages. This is because pip will change the way that it resolves dependency conflicts.
+
+We recommend you use --use-feature=2020-resolver to test your packages with the new resolver before it becomes the default.
+
+jupyter-server 1.16.0 requires jupyter-client>=6.1.12, but you'll have jupyter-client 6.1.7 which is incompatible.
+jupyter-server 1.16.0 requires jupyter-core>=4.7.0, but you'll have jupyter-core 4.6.3 which is incompatible.
+jupyter-server 1.16.0 requires nbconvert>=6.4.4, but you'll have nbconvert 6.0.7 which is incompatible.
+jupyter-server 1.16.0 requires nbformat>=5.2.0, but you'll have nbformat 5.0.8 which is incompatible.
+jupyter-server 1.16.0 requires tornado>=6.1.0, but you'll have tornado 6.0.4 which is incompatible.
+jupyter-server 1.16.0 requires traitlets>=5.1.0, but you'll have traitlets 5.0.5 which is incompatible.
+sphinx-thebe 0.1.1 requires sphinx<5,>=3.5, but you'll have sphinx 3.2.1 which is incompatible.
+```
 
 
 # End
