@@ -39,6 +39,30 @@ noeval = true
 ## Install
 
 Mac 电脑已经安装了 Mactex, 从 USTC 的镜像网站下载 GUI 版本， 直接安装， 没有使用 brew 进行安装。
+- 主页：[https://www.tug.org/mactex/](https://www.tug.org/mactex/)
+- 校园地址：[http://mirrors.ustc.edu.cn/CTAN/systems/mac/mactex/MacTeX.pkg](http://mirrors.ustc.edu.cn/CTAN/systems/mac/mactex/MacTeX.pkg)
+
+
+## Uninstall
+参考官网提供的卸载方案 [https://www.tug.org/mactex/uninstalling.html](https://www.tug.org/mactex/uninstalling.html),
+或者该博客（版本较老有错误）[https://changkun.de/blog/posts/delete-mactex/](https://changkun.de/blog/posts/delete-mactex/)
+```bash
+sudo rm -r /usr/local/texlive/2021
+# 一般情况下，我们还可以看到texlive目录下除了2021，还有一个目录叫做texmf-local，官网上说这只是一个空得目录树，如果你有强迫症，那么，删掉它就彻底完事了。
+
+sudo rm -r /Applications/Tex  # 对应的几个Mactex的APP
+sudo rm -r /Library/TeX
+sudo rm -r ~/Library/texlive/2021
+```
+
+## Upgrade
+Latex的发行版本每年会更新一次，每次更新后 `tlmgr` 命令都无法使用，因为远程的仓库已经换成最新的版本，例如从“2021”变成了“2022”, 所以找不到
+对应的远程仓库。有两种方法可以解决：
+- 卸载旧版本重新安装 MacTeX (官网推荐)
+- 滚动更新，参考教程如下 (不推荐)
+
+[https://syvshc.github.io/2022-04-04-texlive-rolling-update/](https://syvshc.github.io/2022-04-04-texlive-rolling-update/)
+
 
 ## VScode
 

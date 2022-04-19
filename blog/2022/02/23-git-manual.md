@@ -232,6 +232,49 @@ $ git clone git@github.com:your_Github_name/reop_name.git
 
 
 
+## Init Submodule
+
+如果你的package需要使用其他代码库，这些代码库位于GitHub上，那么需要我们使用`git`来 Initialize 和 update。
+`git submodule init`似乎只做了一件事：使用`.gitmodules`中已有的信息填充`.git/config`。
+
+```bash
+git submodule init
+git submodule update
+```
+
+例如某个`.gitmodules`文件内包含了3个需要使用的子模块，
+```bash
+[submodule "pygments-style-algforopt"]
+	path = style
+	url = https://github.com/sisl/pygments-style-algforopt.git
+	branch = master
+[submodule "pygments-julia"]
+	path = lexer
+	url = https://github.com/sisl/pygments-julia.git
+	branch = master
+[submodule "juliaplots.sty"]
+	path = juliaplots.sty
+	url = https://github.com/sisl/juliaplots.sty.git
+	branch = master
+```
+如果我们只需要使用`pygments-julia`和`juliaplots.sty`的代码，这意味着不需要克隆和签出`pygments-style-algforopt`，我么可以使用
+```bash
+git submodule init pygments-julia juliaplots.sty
+```
+然后运行下面的命令来克隆和检查它们
+```bash
+git submodule update
+```
+
+
+可以参考[https://www.codenong.com/44366417/](https://www.codenong.com/44366417/)
+
+
+
+
+
+
+
 # Manual
 
 ## 创建新分支
