@@ -1,0 +1,145 @@
+- title: General Information
+  type: map
+  contents:
+    - name: Full Name
+      value: Fu Yin
+    - name: Date of Birth
+      value: 18th October, 1996
+    - name: Languages
+      value: Chinese, English
+
+- title: Education
+  type: time_table
+  contents:
+    - title: PhD
+      institution: <a href="https://eeps.rice.edu/">Rice University</a>
+      year: 2022 - Now
+      description:
+        - Major in Geophysics
+        - Advised by Prof. Jonathan Ajo-Franklin
+        - Thesis, <i>ongoing</i>
+    - title: Visiting Student
+      institution: <a href="https://ess.sustech.edu.cn/">Southern University of Science and Technology</a>
+      year: July, 2022 
+      description:
+        - Advised by Prof. Ruijia Wang
+        - Focus on Induced Earthquake
+    - title: Master
+      institution: <a href="http://ess.ustc.edu.cn/">University of Science and Technology of China</a>
+      year: 2019 - 2022
+      description:
+        - Major in Geological Engineering
+        - Advised by Prof. Baoshan Wang
+        - Thesis, <i>Uncertainty Assessment of Source Parameters and Ambient Noise Imaging in DAS Observation.</i>
+    - title: Visiting Student
+      institution: <a href="https://eeps.rice.edu/">University of Science and Technology of China</a>
+      year: 2018 - 2019
+      description:
+        - Advised by Prof. Junlun Li
+        - Seismology
+    - title: Bachelor
+      institution: <a href="http://cmg.ouc.edu.cn/">Ocean University of China</a>
+      year: 2015 - 2019
+      description:
+        - Major in Geo-Information Science and Technology
+        - Advised by Prof. Zhihui Zou
+        - Thesis, <i>Study on Focal Mechanism of Small Earthquakes in Hutubi Gas Storage Area.</i>
+
+- title: Academic Interests
+  type: nested_list
+  contents:
+    - title: <strong>Ambient Noise Monitoring and Imaging</strong>
+      items: 
+        - High-Performance cross-correlation code
+        - New imaging algorithm
+    - title: <strong>Earthquake Source Inversion</strong>
+      items:
+        - Uncertainty assessment of source parameters
+        - Source parameters' analysics
+    - title: <strong>Tools</strong>
+      items:
+        - Bayesian inference (MCMC, reversible-jump MCMC, HMC and NUTS)
+        - Distributed acoustic sensing technique (DAS)
+        - High-Performance computing (HPC)
+        
+- title: Publications
+  type: list
+  contents:
+    - See the <a href="https://yinfu.info/publications/">publications</a> page for a full list of publications.
+
+
+
+- title: Field Experience
+  type: time_table
+  contents:
+    - title: Hefei Downhole DAS Observation Experiment
+      year: 2021.09 - 2021.11
+      description:
+        - Downhole Seismic Observation Based on DAS Technique, Hefei, China, installed 36 short-period stations (Z-land) around the 400-m optical cable.
+    - title: Baijiatuan DAS Observation Experiment
+      year: 2020.09 - 2020.10
+      description:
+        - Seismic Observation Based on DAS Technique, Beijing, China, installed 23 short-period stations (EPS), 47 short-period stations (Smartsolo), and 8 broadband stations around the 1-km optical cable.
+
+
+
+
+- title: Teaching Experience
+  type: time_table
+  contents:
+    - title: Engineering Seismology
+      year: Spring, 2021
+      description:
+        - Teaching assitant at USTC course
+        - Designed and led a campus experiment of ambient noise observation with 10 short-period stations; taught Nakamura(HVSR) and SPAC method, including theory, code and assignments.
+
+
+
+
+- title: Open Source Projects
+  type: time_table
+  contents:
+    - title: <a href="https://github.com/Ajo-Franklin-Lab/Jupiter">Jupiter</a>
+      year: 2022 - now
+      description: Seismology tools in DAS data.
+    - title: <a href="https://github.com/OUCyf/MCMTpy">MCMTpy</a>
+      year: 2021 - 2022
+      description: A python package designed for seismic source study. It provides functionality for focal mechanism inversion and source parameters analysis.
+    - title: <a href="https://github.com/OUCyf/Programming-Notebook">Programming-Notebook</a>
+      year: 2022 - now
+      description: A notebook mainly about my scientific notes and gains in learning programming and geophysics
+    - title: <a href="https://github.com/OUCyf/Latex-Template-Rice-USTC">Latex-Template-Rice-USTC</a>
+      year: 2022
+      description: A Latex template including book, thesis, and assignment for Rice and USTC university.
+
+
+- title: Honors and Awards
+  type: time_table
+  contents:
+    - year: 2021
+      items: 
+        - Outstanding Academic Report Nomination Award and Outstanding Academic Poster Award of the 2 ndEngineering Postgraduate Academic Forum, University of Science and Technology of China, China.
+    - year: 2020
+      items: 
+        - First-class Scholarship for Academics, University of Science and Technology of China, China
+    - year: 2018
+      items: 
+        - Science and Technology Achievement Award, Ocean University of China, China
+        - 1 st place at 5 th Applied Geophysical Skills Competition, Ocean University of China, China
+    - year: 2017
+      items: 
+        - Second-class award at the 15th Extracurricular Academic Science and Technology Works Competition, Shandong Association for Science and Technology. [top 3%]
+    - year: 2016
+      items: 
+        - Outstanding Volunteer, People's Government of Shandong, China
+
+
+- title: Skills
+  type: nested_list
+  contents:
+    - title: <strong>Programming Language</strong>
+      items: 
+        - Python, C/C++, Julia, MATLAB, Bash, HTML/CSS, LaTeX
+    - title: <strong>Development Tools</strong>
+      items: 
+        - SAC, PyGMT, ObsPy, TauP, Pykonal, gCAP, NoisePy, SeisIO, SeisNoise, CC-FJpy, SPECFEM2D, OpenSWPC, Frequency-Wavenumber
