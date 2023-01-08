@@ -1,4 +1,4 @@
-name: Build and Deploy
+name: deploy
 
 on:
   push:
@@ -9,30 +9,32 @@ on:
       - main
 
 jobs:
-  build-and-deploy:
+  deploy:
     runs-on: ubuntu-latest
     steps:
     - name: Checkout code
       uses: actions/checkout@v3
-      
     - name: Setup Ruby
       uses: ruby/setup-ruby@v1
       with:
         ruby-version: '3.0.2'
         bundler-cache: true
-
     - name: Install deps
       run: |
-        gem install bundler jekyll
-        bundle install
-        
-    - name: Build website
+        npm install -g mermaid.cli
+    - name: Setup deploy options
+      id: setup
       run: |
-        bundle exec jekyll serve
-
+        git config --global user.name "GitHub Action"
+        git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
+        if [[ ${GITHUB_REF} = refs/pull/*/merge ]]; then # pull request
+          echo "SRC_BRANCH=${GITHUB_HEAD_REF}" >> $GITHUB_OUTPUT
+          echo "NO_PUSH=--no-push" >> $GITHUB_OUTPUT
+        elif [[ ${GITHUB_REF} = refs/heads/* ]]; then # branch, e.g. master, source etc
+          echo "SRC_BRANCH=${GITHUB_REF#refs/heads/}" >> $GITHUB_OUTPUT
+        fi
+        echo "DEPLOY_BRANCH=gh-pages" >> $GITHUB_OUTPUT
     - name: Deploy website 
-      uses: JamesIves/github-pages-deploy-action@releases/v3
-      with:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        BRANCH: gh-pages
-        FOLDER: __site
+      run:  yes | bash bin/deploy --verbose ${{ steps.setup.outputs.NO_PUSH }}
+                    --src ${{ steps.setup.outputs.SRC_BRANCH }} 
+                    --deploy ${{ steps.setup.outputs.DEPLOY_BRANCH }} 
